@@ -99,7 +99,7 @@ export default function ReviewsPage() {
               handle: "@sarahjohn2024",
               testimonial: "Every dish packed with authentic island flavor! Teria and Deb truly know how to deliver Caribbean excellence.",
               rating: 5,
-              imageSrc: "http://img.b2bpic.net/free-photo/young-woman-eating-delicious-tiramisu-cafe_1303-25270.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/young-woman-eating-delicious-tiramisu-cafe_1303-25270.jpg?_wi=2",
               imageAlt: "smiling woman enjoying restaurant meal",
             },
             {
@@ -108,7 +108,7 @@ export default function ReviewsPage() {
               handle: "@mikeflavorseek",
               testimonial: "Jerk pork did not disappoint! Best food truck in Lehigh Acres. Fresh, authentic, and made with real passion.",
               rating: 5,
-              imageSrc: "http://img.b2bpic.net/free-photo/couple-enjoying-spending-good-time-together-while-having-date-restaurant_58466-16035.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/couple-enjoying-spending-good-time-together-while-having-date-restaurant_58466-16035.jpg?_wi=2",
               imageAlt: "happy man enjoying food truck meal",
             },
             {
@@ -117,7 +117,7 @@ export default function ReviewsPage() {
               handle: "@amandataste",
               testimonial: "The curry shrimp is absolutely incredible! You can taste the love in every bite. Supporting Black-owned, women-owned businesses never tasted so good.",
               rating: 5,
-              imageSrc: "http://img.b2bpic.net/free-photo/sideways-shot-attractive-curly-woman-has-happy-expression-enjoys-electronic-song-modern-headphones-has-recreation-time-reads-text-message-cell-phone_273609-3485.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/sideways-shot-attractive-curly-woman-has-happy-expression-enjoys-electronic-song-modern-headphones-has-recreation-time-reads-text-message-cell-phone_273609-3485.jpg?_wi=2",
               imageAlt: "woman smiling holding caribbean food",
             },
             {
@@ -126,7 +126,7 @@ export default function ReviewsPage() {
               handle: "@davidsflavorquests",
               testimonial: "Finally, real Caribbean food in Lehigh Acres! The menu, the quality, the service—everything is top-tier. This is my new favorite spot.",
               rating: 5,
-              imageSrc: "http://img.b2bpic.net/free-photo/crazy-dealer-happy-expression_1194-4005.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/crazy-dealer-happy-expression_1194-4005.jpg?_wi=2",
               imageAlt: "man happy thumbs up food quality",
             },
             {
@@ -135,7 +135,7 @@ export default function ReviewsPage() {
               handle: "@jessicaeats_local",
               testimonial: "Conch fritters are crispy heaven! The whole experience feels premium yet so authentic. Teria and Deb are changing the food game.",
               rating: 5,
-              imageSrc: "http://img.b2bpic.net/free-photo/friends-eating-barbecue_23-2148733607.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/friends-eating-barbecue_23-2148733607.jpg?_wi=2",
               imageAlt: "woman smiling holding plate of food",
             },
             {
@@ -144,7 +144,7 @@ export default function ReviewsPage() {
               handle: "@robfeeds",
               testimonial: "Island fusion done right. The quality of ingredients and cooking technique is professional-level. Worth every penny and the drive. Highly recommend!",
               rating: 5,
-              imageSrc: "http://img.b2bpic.net/free-photo/woman-with-thumbs-up_1149-1163.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/woman-with-thumbs-up_1149-1163.jpg?_wi=2",
               imageAlt: "man approving satisfied testimonial portrait",
             },
           ]}
@@ -178,7 +178,7 @@ export default function ReviewsPage() {
               title: "Join Our Island Community",
               description: "Every review tells our story. Connect with fellow Caribbean Flair lovers and celebrate authentic island cuisine.",
               media: {
-                imageSrc: "http://img.b2bpic.net/free-photo/friends-eating-barbecue_23-2148733607.jpg",
+                imageSrc: "http://img.b2bpic.net/free-photo/friends-eating-barbecue_23-2148733607.jpg?_wi=3",
                 imageAlt: "friends enjoying caribbean food together",
               },
               items: [
@@ -199,7 +199,7 @@ export default function ReviewsPage() {
 
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg"
+          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=5"
           imageAlt="red food trailer caribbean palm tree evening"
           logoText="Caribbean Flair"
           copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
