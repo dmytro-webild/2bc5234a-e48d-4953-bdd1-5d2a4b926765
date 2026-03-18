@@ -231,7 +231,7 @@ export default function HomePage() {
           brandName="Caribbean Flair"
           navItems={navItems}
           button={{
-            text: "Order Now",            href: "#signature-dishes"
+            text: "See Full Menu",            href: "/menu"
           }}
         />
       </div>
@@ -255,9 +255,9 @@ export default function HomePage() {
                   {item.name}
                 </a>
               ))}
-              <button className="w-full bg-primary-cta text-white py-2 rounded-lg font-semibold hover:opacity-90">
-                Order Online
-              </button>
+              <a href="/menu" className="w-full bg-primary-cta text-white py-2 rounded-lg font-semibold hover:opacity-90 text-center block">
+                See Full Menu
+              </a>
             </div>
           </div>
         </div>
@@ -274,9 +274,9 @@ export default function HomePage() {
             <Phone className="w-6 h-6 text-primary-cta group-hover:scale-110 transition-transform" />
           </a>
           <a
-            href="#signature-dishes"
+            href="/menu"
             className="bg-gradient-to-r from-primary-cta to-accent text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all flex items-center justify-center group font-semibold"
-            title="Order Now"
+            title="See Full Menu"
           >
             <ShoppingCart className="w-6 h-6 group-hover:scale-110 transition-transform" />
           </a>
@@ -320,10 +320,10 @@ export default function HomePage() {
           background={{ variant: "glowing-orb" }}
           buttons={[
             {
-              text: "Order Online Now",              href: "#signature-dishes"
+              text: "Order Online Now",              href: "/menu"
             },
             {
-              text: "View Full Menu",              href: "#signature-dishes"
+              text: "View Full Menu",              href: "/menu"
             },
           ]}
           buttonAnimation="slide-up"
@@ -345,7 +345,7 @@ export default function HomePage() {
           tagAnimation="slide-up"
           buttons={[
             {
-              text: "Explore Full Menu",              href: "#signature-dishes"
+              text: "Explore Full Menu",              href: "/menu"
             },
           ]}
           buttonAnimation="slide-up"
@@ -512,7 +512,7 @@ export default function HomePage() {
           tagAnimation="slide-up"
           buttons={[
             {
-              text: "Order Online Now",              href: "#signature-dishes"
+              text: "Order Online Now",              href: "/menu"
             },
             {
               text: "Call (239) 785-0423",              href: "tel:2397850423"
