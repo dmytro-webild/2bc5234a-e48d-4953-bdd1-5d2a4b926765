@@ -66,27 +66,27 @@ export default function GalleryPage() {
     {
       id: "user-upload-1",      category: "Dishes",      title: "Caribbean Delight",      excerpt:
         "Stunning presentation of our signature Caribbean feast with vibrant colors and authentic flavors.",      imageSrc:
-        "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-2gw0wih3.jpg",      imageAlt: "User uploaded Caribbean dish",      authorName: "Caribbean Flair Community",      authorAvatar:
+        "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-2gw0wih3.jpg?_wi=1",      imageAlt: "User uploaded Caribbean dish",      authorName: "Caribbean Flair Community",      authorAvatar:
         "http://img.b2bpic.net/free-photo/handsome-business-man-wearing-suit-looking-camera-smiling-broadly-with-happy-face-standing-white-background_141793-54115.jpg",      date: "Community Upload"},
     {
       id: "user-upload-2",      category: "Dishes",      title: "Island Feast Experience",      excerpt:
         "A mouth-watering capture of our authentic Jamaican cuisine in all its glory.",      imageSrc:
-        "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-wha24yfi.jpg",      imageAlt: "User uploaded island feast",      authorName: "Caribbean Flair Community",      authorAvatar:
+        "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-wha24yfi.jpg?_wi=1",      imageAlt: "User uploaded island feast",      authorName: "Caribbean Flair Community",      authorAvatar:
         "http://img.b2bpic.net/free-photo/close-up-businessman-with-tie_1098-2867.jpg",      date: "Community Upload"},
     {
       id: "user-upload-3",      category: "Grill",      title: "Fresh Off The Grill",      excerpt:
         "Behind-the-scenes action showing our expert grill masters at work with authentic technique.",      imageSrc:
-        "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-qcfdeh7f.jpg",      imageAlt: "Grilling action",      authorName: "Caribbean Flair Community",      authorAvatar:
+        "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-qcfdeh7f.jpg?_wi=1",      imageAlt: "Grilling action",      authorName: "Caribbean Flair Community",      authorAvatar:
         "http://img.b2bpic.net/free-photo/young-male-holding-hands-pockets-white-shirt-jacket-looking-elegant-front-view_176474-99655.jpg",      date: "Community Upload"},
     {
       id: "user-upload-4",      category: "Dishes",      title: "Platter Perfection",      excerpt:
         "A beautifully plated Caribbean meal showcasing the quality and care we put into every order.",      imageSrc:
-        "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-dk53z92a.jpg",      imageAlt: "Platter presentation",      authorName: "Caribbean Flair Community",      authorAvatar:
+        "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-dk53z92a.jpg?_wi=1",      imageAlt: "Platter presentation",      authorName: "Caribbean Flair Community",      authorAvatar:
         "http://img.b2bpic.net/free-photo/pleased-young-brunette-caucasian-girl-looks-camera_141793-103873.jpg",      date: "Community Upload"},
     {
       id: "user-upload-5",      category: "Community",      title: "Community Gathering",      excerpt:
         "Caribbean Flair bringing people together through authentic flavors and shared island experiences.",      imageSrc:
-        "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-y2tu4f81.jpg",      imageAlt: "Community gathering",      authorName: "Caribbean Flair Community",      authorAvatar:
+        "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-y2tu4f81.jpg?_wi=1",      imageAlt: "Community gathering",      authorName: "Caribbean Flair Community",      authorAvatar:
         "http://img.b2bpic.net/free-photo/woman-with-thumbs-up_1149-1163.jpg",      date: "Community Upload"},
     {
       id: "gallery-1",      category: "Main Dishes",      title: "Jerk Pork Did Not Disappoint",      excerpt:
@@ -143,7 +143,7 @@ export default function GalleryPage() {
               text: "Order Now",              href: "/menu"},
           ]}
           buttonAnimation="slide-up"
-          imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg"
+          imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg?_wi=2"
           imageAlt="Caribbean Flair Gallery"
           mediaAnimation="opacity"
           imagePosition="right"
