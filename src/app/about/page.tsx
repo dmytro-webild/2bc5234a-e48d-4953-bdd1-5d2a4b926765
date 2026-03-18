@@ -48,7 +48,7 @@ export default function AboutPage() {
     },
     {
       title: "Connect With Us",      items: [
-        { label: "Facebook", href: "https://facebook.com/caribbeanflair" },
+        { label: "Facebook", href: "https://www.facebook.com/share/1CckZyvyXX/?mibextid=wwXIfr" },
         { label: "About Us", href: "/about" },
         { label: "Privacy Policy", href: "/" },
         { label: "Terms of Service", href: "/" },
@@ -169,20 +169,20 @@ export default function AboutPage() {
           members={[
             {
               id: "teria-bryant",              name: "Teria Bryant",              role: "Founder & Head Chef",              description:
-                "Teria brings 15+ years of Caribbean culinary expertise and authentic island passion to every dish. Vision transformed Caribbean Flair from a dream into a premium dining destination serving Lehigh Acres with pride and excellence.",              imageSrc:
+                "Teria brings 15+ years of Caribbean culinary expertise and authentic island passion to every dish. Her vision transformed Caribbean Flair from a dream into a premium dining destination serving Lehigh Acres with pride.",              imageSrc:
                 "data:image/svg+xml,%3Csvg xmlns=?_wi=1'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ff6b6b;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23ffa500;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad1)' width='400' height='300'/%3E%3Ccircle cx='200' cy='120' r='50' fill='%23fff' opacity='0.9'/%3E%3Crect x='120' y='180' width='160' height='100' rx='10' fill='%23fff' opacity='0.1'/%3E%3C/svg%3E",              imageAlt: "Teria Bryant, founder of Caribbean Flair",              socialLinks: [
                 {
                   icon: Facebook,
-                  url: "https://facebook.com/caribbeanflair"},
+                  url: "https://www.facebook.com/share/1CckZyvyXX/?mibextid=wwXIfr"},
               ],
             },
             {
               id: "deb-farrell",              name: "Deb Farrell",              role: "Co-Owner & Operations Lead",              description:
-                "Deb ensures every customer experience is smooth, welcoming, and unforgettable. Together with Teria, building a thriving Black- and women-owned business that celebrates Caribbean culture and community impact.",              imageSrc:
+                "Deb ensures every customer experience is smooth, welcoming, and unforgettable. Together with Teria, they are building a thriving Black- and women-owned business that celebrates Caribbean culture and community impact.",              imageSrc:
                 "data:image/svg+xml,%3Csvg xmlns=?_wi=2'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234ecdc4;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2344a08d;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad2)' width='400' height='300'/%3E%3Ccircle cx='200' cy='120' r='50' fill='%23fff' opacity='0.9'/%3E%3Crect x='120' y='180' width='160' height='100' rx='10' fill='%23fff' opacity='0.1'/%3E%3C/svg%3E",              imageAlt: "Deb Farrell, co-owner of Caribbean Flair",              socialLinks: [
                 {
                   icon: Facebook,
-                  url: "https://facebook.com/caribbeanflair"},
+                  url: "https://www.facebook.com/share/1CckZyvyXX/?mibextid=wwXIfr"},
               ],
             },
           ]}
