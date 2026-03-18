@@ -1,19 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleCentered from "@/components/navbar/NavbarStyleCentered/NavbarStyleCentered";
 import HeroSplit from "@/components/sections/hero/HeroSplit";
 import ProductCardFour from "@/components/sections/product/ProductCardFour";
 import FooterMedia from "@/components/sections/footer/FooterMedia";
-import { Flame, Lock, X } from "lucide-react";
+import { Flame } from "lucide-react";
 
 export default function FullMenuPage() {
-  const [isPasswordProtected, setIsPasswordProtected] = useState(true);
-  const [passwordInput, setPasswordInput] = useState("");
-  const [passwordError, setPasswordError] = useState(false);
-  const MENU_PASSWORD = "Caribbean2025";
-
   const navItems = [
     { name: "Home", id: "home" },
     { name: "Menu", id: "menu" },
@@ -57,16 +51,6 @@ export default function FullMenuPage() {
       ],
     },
   ];
-
-  const handlePasswordSubmit = () => {
-    if (passwordInput === MENU_PASSWORD) {
-      setIsPasswordProtected(false);
-      setPasswordError(false);
-    } else {
-      setPasswordError(true);
-      setPasswordInput("");
-    }
-  };
 
   const allMenuItems = [
     {
@@ -126,101 +110,48 @@ export default function FullMenuPage() {
         />
       </div>
 
-      {/* Password Protection Modal */}
-      {isPasswordProtected && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg shadow-2xl max-w-md w-full p-8">
-            <div className="flex items-center justify-center mb-6">
-              <Lock className="w-8 h-8 text-orange-500 mr-2" />
-              <h2 className="text-2xl font-bold">Full Menu Access</h2>
-            </div>
-            <p className="text-gray-600 text-center mb-6">
-              This full menu is password protected. Please enter the password to continue.
-            </p>
-            <input
-              type="password"
-              value={passwordInput}
-              onChange={(e) => {
-                setPasswordInput(e.target.value);
-                setPasswordError(false);
-              }}
-              onKeyPress={(e) => {
-                if (e.key === "Enter") {
-                  handlePasswordSubmit();
-                }
-              }}
-              placeholder="Enter password"
-              className={`w-full px-4 py-3 border-2 rounded-lg mb-4 focus:outline-none transition ${
-                passwordError
-                  ? "border-red-500 focus:border-red-600"
-                  : "border-gray-300 focus:border-orange-500"
-              }`}
-            />
-            {passwordError && (
-              <p className="text-red-600 text-sm mb-4">Incorrect password. Please try again.</p>
-            )}
-            <button
-              onClick={handlePasswordSubmit}
-              className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-3 rounded-lg hover:opacity-90 transition mb-3"
-            >
-              Unlock Menu
-            </button>
-            <a
-              href="/"
-              className="block w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 rounded-lg transition text-center"
-            >
-              Back to Home
-            </a>
-          </div>
-        </div>
-      )}
-
       {/* Hero Section */}
-      {!isPasswordProtected && (
-        <div id="hero" data-section="hero">
-          <HeroSplit
-            title="Complete Island Menu"
-            description="Explore our full selection of authentic Caribbean dishes. Every item is crafted fresh and packed with island soul."
-            tag="Exclusive"
-            tagIcon={Flame}
-            tagAnimation="slide-up"
-            background={{ variant: "glowing-orb" }}
-            buttons={[
-              {
-                text: "Call to Order",                href: "tel:2397850423"},
-            ]}
-            buttonAnimation="slide-up"
-            imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg?_wi=3"
-            imageAlt="Caribbean Flair Full Menu"
-            mediaAnimation="opacity"
-            imagePosition="right"
-            ariaLabel="Full menu page hero section"
-          />
-        </div>
-      )}
+      <div id="hero" data-section="hero">
+        <HeroSplit
+          title="Complete Island Menu"
+          description="Explore our full selection of authentic Caribbean dishes. Every item is crafted fresh and packed with island soul."
+          tag="Exclusive"
+          tagIcon={Flame}
+          tagAnimation="slide-up"
+          background={{ variant: "glowing-orb" }}
+          buttons={[
+            {
+              text: "Call to Order",              href: "tel:2397850423"},
+          ]}
+          buttonAnimation="slide-up"
+          imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg?_wi=3"
+          imageAlt="Caribbean Flair Full Menu"
+          mediaAnimation="opacity"
+          imagePosition="right"
+          ariaLabel="Full menu page hero section"
+        />
+      </div>
 
       {/* Full Menu Section */}
-      {!isPasswordProtected && (
-        <div id="full-menu" data-section="full-menu">
-          <ProductCardFour
-            title="All Menu Items"
-            description="Discover our complete selection of authentic Caribbean dishes, sides, drinks, and specials. All items are fresh and made to order."
-            tag="Complete Selection"
-            tagIcon={Flame}
-            tagAnimation="slide-up"
-            buttons={[
-              {
-                text: "Order Now",                href: "/menu"},
-            ]}
-            buttonAnimation="slide-up"
-            textboxLayout="default"
-            gridVariant="three-columns-all-equal-width"
-            animationType="slide-up"
-            useInvertedBackground={false}
-            products={allMenuItems}
-          />
-        </div>
-      )}
+      <div id="full-menu" data-section="full-menu">
+        <ProductCardFour
+          title="All Menu Items"
+          description="Discover our complete selection of authentic Caribbean dishes, sides, drinks, and specials. All items are fresh and made to order."
+          tag="Complete Selection"
+          tagIcon={Flame}
+          tagAnimation="slide-up"
+          buttons={[
+            {
+              text: "Order Now",              href: "/menu"},
+          ]}
+          buttonAnimation="slide-up"
+          textboxLayout="default"
+          gridVariant="three-columns-all-equal-width"
+          animationType="slide-up"
+          useInvertedBackground={false}
+          products={allMenuItems}
+        />
+      </div>
 
       {/* Footer */}
       <div id="footer" data-section="footer">
