@@ -161,7 +161,7 @@ export default function MenuPage() {
               text: "Call to Order",              href: "tel:2397850423"},
           ]}
           buttonAnimation="slide-up"
-          imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg"
+          imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg?_wi=3"
           imageAlt="Caribbean Flair Menu"
           mediaAnimation="opacity"
           imagePosition="right"
