@@ -205,7 +205,7 @@ export default function HomePage() {
               text: "View Full Menu",              href: "#signature-dishes"},
           ]}
           buttonAnimation="slide-up"
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-2gw0wih3.jpg"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-2gw0wih3.jpg?_wi=3"
           imageAlt="Red Caribbean Flair Island Jerk Grill Trailer"
           mediaAnimation="opacity"
           imagePosition="right"
@@ -233,7 +233,7 @@ export default function HomePage() {
           products={[
             {
               id: "jerk-chicken",              name: "Jerk Chicken Platter",              price: "$15.95",              variant: "Full Rack",              imageSrc:
-                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-wha24yfi.jpg",              imageAlt: "Jerk chicken grilled on foil with spices"},
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-wha24yfi.jpg?_wi=2",              imageAlt: "Jerk chicken grilled on foil with spices"},
             {
               id: "curry-shrimp",              name: "Curry Shrimp Platter",              price: "$16.95",              variant: "Fresh Daily",              imageSrc:
                 "http://img.b2bpic.net/free-photo/side-view-fried-eggs-with-shrimps-vegetables-pan-served-with-sauces_140725-11952.jpg?_wi=1",              imageAlt: "Curry shrimp over rice and peas"},
@@ -259,7 +259,7 @@ export default function HomePage() {
             {
               id: "jerk-pork",              category: "Main Dishes",              title: "Jerk Pork Did Not Disappoint",              excerpt:
                 "Perfectly seasoned and grilled, bursting with island spices and authentic Jamaican flavor.",              imageSrc:
-                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-qcfdeh7f.jpg",              imageAlt: "Jerk pork platter with rice and tropical slaw",              authorName: "Caribbean Flair Team",              authorAvatar:
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-qcfdeh7f.jpg?_wi=2",              imageAlt: "Jerk pork platter with rice and tropical slaw",              authorName: "Caribbean Flair Team",              authorAvatar:
                 "http://img.b2bpic.net/free-photo/handsome-business-man-wearing-suit-looking-camera-smiling-broadly-with-happy-face-standing-white-background_141793-54115.jpg",              date: "Fresh Daily"},
             {
               id: "curry-goat",              category: "Featured",              title: "Curry Goat - A Community Favorite",              excerpt:
@@ -269,7 +269,7 @@ export default function HomePage() {
             {
               id: "festival-sides",              category: "Sides",              title: "Festival Dumplings & Tropical Slaw",              excerpt:
                 "Crispy, golden festival dumplings paired with our signature tropical slaw for the perfect complement.",              imageSrc:
-                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-dk53z92a.jpg",              imageAlt:
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-dk53z92a.jpg?_wi=2",              imageAlt:
                 "Festival dumplings with tropical slaw and mac and cheese",              authorName: "Caribbean Flair Team",              authorAvatar:
                 "http://img.b2bpic.net/free-photo/close-up-businessman-with-tie_1098-2867.jpg",              date: "Must Try"},
             {
@@ -285,7 +285,7 @@ export default function HomePage() {
             {
               id: "grill-action",              category: "Behind the Scenes",              title: "Fresh Off The Grill - Live Action",              excerpt:
                 "Watch our expert grill masters prepare your meal with passion, precision, and authentic Caribbean technique.",              imageSrc:
-                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-y2tu4f81.jpg",              imageAlt: "Chef grilling jerk meats on foil with smoke",              authorName: "Caribbean Flair Team",              authorAvatar:
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-y2tu4f81.jpg?_wi=2",              imageAlt: "Chef grilling jerk meats on foil with smoke",              authorName: "Caribbean Flair Team",              authorAvatar:
                 "http://img.b2bpic.net/free-photo/handsome-business-man-wearing-suit-looking-camera-smiling-broadly-with-happy-face-standing-white-background_141793-54115.jpg",              date: "Daily Special"},
           ]}
         />
