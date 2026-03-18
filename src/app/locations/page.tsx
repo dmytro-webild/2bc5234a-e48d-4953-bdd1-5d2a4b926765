@@ -72,7 +72,8 @@ export default function LocationsPage() {
           brandName="Caribbean Flair"
           navItems={navItems}
           button={{
-            text: "Order Now",            href: "/menu"}}
+            text: "Order Now",            href: "/menu"
+          }}
         />
       </div>
 
@@ -87,9 +88,11 @@ export default function LocationsPage() {
           background={{ variant: "glowing-orb" }}
           buttons={[
             {
-              text: "Get Directions",              href: "https://maps.google.com/?q=801+Leeland+Heights+Blvd+W+Lehigh+Acres+FL+33936"},
+              text: "Get Directions",              href: "https://maps.google.com/?q=801+Leeland+Heights+Blvd+W+Lehigh+Acres+FL+33936"
+            },
             {
-              text: "Call (239) 785-0423",              href: "tel:2397850423"},
+              text: "Call (239) 785-0423",              href: "tel:2397850423"
+            },
           ]}
           buttonAnimation="slide-up"
           imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=1"
@@ -113,7 +116,8 @@ export default function LocationsPage() {
           useInvertedBackground={false}
           features={[
             {
-              title: "Address",              description: "801 Leeland Heights Blvd W, Lehigh Acres, FL 33936",              bentoComponent: "map"},
+              title: "Address",              description: "801 Leeland Heights Blvd W, Lehigh Acres, FL 33936",              bentoComponent: "map"
+            },
             {
               title: "Hours of Operation",              description: "Open daily. See schedule below.",              bentoComponent: "icon-info-cards",              items: [
                 { icon: Clock, label: "Monday-Friday", value: "11 AM - 9 PM" },
@@ -144,9 +148,11 @@ export default function LocationsPage() {
           tagAnimation="slide-up"
           buttons={[
             {
-              text: "Call (239) 785-0423",              href: "tel:2397850423"},
+              text: "Call (239) 785-0423",              href: "tel:2397850423"
+            },
             {
-              text: "Get Directions",              href: "https://maps.google.com/?q=801+Leeland+Heights+Blvd+W+Lehigh+Acres+FL+33936"},
+              text: "Get Directions",              href: "https://maps.google.com/?q=801+Leeland+Heights+Blvd+W+Lehigh+Acres+FL+33936"
+            },
           ]}
           buttonAnimation="slide-up"
           textboxLayout="default"
@@ -154,10 +160,9 @@ export default function LocationsPage() {
           useInvertedBackground={true}
           features={[
             {
-              id: "service-info",              title: "How to Order",              description:
-                "Visit us in person, call ahead for pickup, or order online through our website. We offer delivery and catering for special events.",              media: {
-                imageSrc:
-                  "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1"},
+              id: "service-info",              title: "How to Order",              description: "Visit us in person, call ahead for pickup, or order online through our website. We offer delivery and catering for special events.",              media: {
+                imageSrc: "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1"
+              },
               items: [
                 {
                   icon: CheckCircle,
