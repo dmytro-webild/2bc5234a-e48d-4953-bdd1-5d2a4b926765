@@ -106,6 +106,127 @@ export default function HomePage() {
       secondaryButtonStyle="glass"
       headingFontWeight="medium"
     >
+      <style>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideInFromLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-60px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideInFromRight {
+          from {
+            opacity: 0;
+            transform: translateX(60px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes glowHover {
+          0% {
+            box-shadow: 0 0 0px rgba(227, 68, 0, 0.4);
+          }
+          50% {
+            box-shadow: 0 0 20px rgba(227, 68, 0, 0.6);
+          }
+          100% {
+            box-shadow: 0 0 30px rgba(227, 68, 0, 0.8);
+          }
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          animation: fadeIn 0.8s ease-out;
+        }
+
+        [data-section] {
+          animation: fadeIn 1.2s ease-out forwards;
+          opacity: 0;
+        }
+
+        #hero [data-section] {
+          animation-delay: 0.1s;
+        }
+
+        #signature-dishes {
+          animation-delay: 0.2s;
+        }
+
+        #featured-gallery {
+          animation-delay: 0.3s;
+        }
+
+        #testimonials {
+          animation-delay: 0.4s;
+        }
+
+        #owners-spotlight {
+          animation-delay: 0.5s;
+        }
+
+        #final-cta {
+          animation-delay: 0.6s;
+        }
+
+        #footer {
+          animation-delay: 0.7s;
+        }
+
+        img {
+          animation: slideInFromRight 1s ease-out forwards;
+          opacity: 0;
+        }
+
+        #hero img {
+          animation-delay: 0.3s;
+        }
+
+        #signature-dishes img {
+          animation-delay: 0.4s;
+        }
+
+        #featured-gallery img {
+          animation-delay: 0.5s;
+        }
+
+        button, [role="button"], a[href*="#"], a[href*="/"] {
+          position: relative;
+          transition: all 0.3s ease;
+        }
+
+        button:hover, [role="button"]:hover, a[href*="#"]:hover, a[href*="/"]:hover {
+          animation: glowHover 0.6s ease-in-out;
+        }
+
+        .bg-gradient-to-r, .bg-primary-cta, [class*="bg-blue"], [class*="bg-orange"], [class*="bg-red"] {
+          transition: all 0.3s ease;
+        }
+
+        .bg-gradient-to-r:hover, .bg-primary-cta:hover, [class*="bg-blue"]:hover, [class*="bg-orange"]:hover, [class*="bg-red"]:hover {
+          filter: brightness(1.1);
+          animation: glowHover 0.6s ease-in-out;
+        }
+      `}</style>
+
       {/* Persistent Top Navigation Bar */}
       <div id="nav" data-section="nav" className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur-md border-b border-gray-200">
         <NavbarStyleCentered
