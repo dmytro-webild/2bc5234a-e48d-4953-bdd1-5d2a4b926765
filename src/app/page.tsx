@@ -19,49 +19,76 @@ import {
   Zap,
   TrendingUp,
   Facebook,
+  Phone,
+  ShoppingCart,
+  X,
+  Instagram,
+  MapPin,
+  Clock,
 } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function HomePage() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDesktopButtonsVisible, setIsDesktopButtonsVisible] = useState(true);
+  const [showCookiePreferences, setShowCookiePreferences] = useState(false);
+  const [cookiesAccepted, setCookiesAccepted] = useState(false);
+
+  useEffect(() => {
+    const cookieConsent = localStorage.getItem("cookie-consent");
+    if (!cookieConsent) {
+      setShowCookiePreferences(true);
+    } else {
+      setCookiesAccepted(true);
+    }
+  }, []);
+
+  const handleCookieAccept = () => {
+    localStorage.setItem("cookie-consent", "accepted");
+    setCookiesAccepted(true);
+    setShowCookiePreferences(false);
+  };
+
   const navItems = [
     { name: "Home", id: "home" },
-    { name: "Menu", id: "menu" },
-    { name: "About Us", id: "about" },
-    { name: "Gallery", id: "gallery" },
-    { name: "Reviews", id: "reviews" },
-    { name: "Locations", id: "locations" },
+    { name: "Menu", id: "signature-dishes" },
+    { name: "About Us", id: "owners-spotlight" },
+    { name: "Gallery", id: "featured-gallery" },
+    { name: "Reviews", id: "testimonials" },
+    { name: "Locations", id: "footer" },
   ];
 
   const footerColumns = [
     {
       title: "Quick Links",      items: [
         { label: "Home", href: "/" },
-        { label: "Menu", href: "/menu" },
-        { label: "Gallery", href: "/" },
-        { label: "Reviews", href: "/" },
+        { label: "Menu", href: "#signature-dishes" },
+        { label: "Gallery", href: "#featured-gallery" },
+        { label: "Reviews", href: "#testimonials" },
       ],
     },
     {
       title: "Order & Contact",      items: [
-        { label: "Order Online", href: "/" },
+        { label: "Order Online", href: "#signature-dishes" },
         { label: "Call Us", href: "tel:2397850423" },
-        { label: "Locations & Hours", href: "/" },
-        { label: "Contact", href: "/" },
+        { label: "Locations & Hours", href: "#footer" },
+        { label: "Contact", href: "#footer" },
       ],
     },
     {
       title: "Connect With Us",      items: [
         { label: "Facebook", href: "https://facebook.com/caribbeanflair" },
-        { label: "About Us", href: "/" },
-        { label: "Privacy Policy", href: "/" },
-        { label: "Terms of Service", href: "/" },
+        { label: "Instagram", href: "https://instagram.com/caribbeanflair" },
+        { label: "Privacy Policy", href: "#" },
+        { label: "Terms of Service", href: "#" },
       ],
     },
     {
       title: "Located In",      items: [
-        { label: "801 Leeland Heights Blvd W", href: "/" },
-        { label: "Lehigh Acres, FL 33936", href: "/" },
-        { label: "Open Until 9PM", href: "/" },
-        { label: "Delivery Available", href: "/" },
+        { label: "801 Leeland Heights Blvd W", href: "#" },
+        { label: "Lehigh Acres, FL 33936", href: "#" },
+        { label: "Open Until 9PM", href: "#" },
+        { label: "Delivery Available", href: "#" },
       ],
     },
   ];
@@ -79,15 +106,88 @@ export default function HomePage() {
       secondaryButtonStyle="glass"
       headingFontWeight="medium"
     >
-      {/* Navbar */}
-      <div id="nav" data-section="nav">
+      {/* Persistent Top Navigation Bar */}
+      <div id="nav" data-section="nav" className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur-md border-b border-gray-200">
         <NavbarStyleCentered
           brandName="Caribbean Flair"
           navItems={navItems}
           button={{
-            text: "Order Now",            href: "/menu"}}
+            text: "Order Now",            href: "#signature-dishes"}}
         />
       </div>
+
+      {/* Floating Mobile Sidebar Menu */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-30 md:hidden">
+          <div
+            className="absolute inset-0 bg-black/50"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+          <div className="absolute right-0 top-16 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-2xl m-4 border border-white/20">
+            <div className="p-6 space-y-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  className="block text-gray-800 hover:text-primary-cta font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ))}
+              <button className="w-full bg-primary-cta text-white py-2 rounded-lg font-semibold hover:opacity-90">
+                Order Online
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Floating Desktop Action Buttons */}
+      {isDesktopButtonsVisible && (
+        <div className="hidden md:fixed md:right-6 md:bottom-6 md:z-20 md:flex md:flex-col md:gap-3">
+          <a
+            href="tel:2397850423"
+            className="bg-white/90 backdrop-blur-lg border border-white/20 rounded-full p-4 shadow-lg hover:shadow-xl hover:bg-white transition-all flex items-center justify-center group"
+            title="Call Us"
+          >
+            <Phone className="w-6 h-6 text-primary-cta group-hover:scale-110 transition-transform" />
+          </a>
+          <a
+            href="#signature-dishes"
+            className="bg-gradient-to-r from-primary-cta to-accent text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all flex items-center justify-center group font-semibold"
+            title="Order Now"
+          >
+            <ShoppingCart className="w-6 h-6 group-hover:scale-110 transition-transform" />
+          </a>
+        </div>
+      )}
+
+      {/* Cookie Preferences Popup */}
+      {showCookiePreferences && !cookiesAccepted && (
+        <div className="fixed bottom-6 left-6 right-6 z-50 max-w-sm bg-white/95 backdrop-blur-lg rounded-lg shadow-2xl border border-white/20 p-4 md:p-6">
+          <div className="space-y-3">
+            <h3 className="font-semibold text-gray-900">Cookie Preferences</h3>
+            <p className="text-sm text-gray-600">
+              We use cookies to enhance your experience, personalize content, and analyze site traffic.
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={handleCookieAccept}
+                className="flex-1 bg-primary-cta text-white py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+              >
+                Accept All
+              </button>
+              <button
+                onClick={() => setShowCookiePreferences(false)}
+                className="flex-1 border border-gray-300 text-gray-800 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+              >
+                Decline
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <div id="hero" data-section="hero">
@@ -100,12 +200,12 @@ export default function HomePage() {
           background={{ variant: "glowing-orb" }}
           buttons={[
             {
-              text: "Order Online Now",              href: "/menu"},
+              text: "Order Online Now",              href: "#signature-dishes"},
             {
-              text: "View Full Menu",              href: "/menu"},
+              text: "View Full Menu",              href: "#signature-dishes"},
           ]}
           buttonAnimation="slide-up"
-          imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-2gw0wih3.jpg"
           imageAlt="Red Caribbean Flair Island Jerk Grill Trailer"
           mediaAnimation="opacity"
           imagePosition="right"
@@ -123,7 +223,7 @@ export default function HomePage() {
           tagAnimation="slide-up"
           buttons={[
             {
-              text: "Explore Full Menu",              href: "/menu"},
+              text: "Explore Full Menu",              href: "#signature-dishes"},
           ]}
           buttonAnimation="slide-up"
           textboxLayout="default"
@@ -133,7 +233,7 @@ export default function HomePage() {
           products={[
             {
               id: "jerk-chicken",              name: "Jerk Chicken Platter",              price: "$15.95",              variant: "Full Rack",              imageSrc:
-                "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=1",              imageAlt: "Jerk chicken grilled on foil with spices"},
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-wha24yfi.jpg",              imageAlt: "Jerk chicken grilled on foil with spices"},
             {
               id: "curry-shrimp",              name: "Curry Shrimp Platter",              price: "$16.95",              variant: "Fresh Daily",              imageSrc:
                 "http://img.b2bpic.net/free-photo/side-view-fried-eggs-with-shrimps-vegetables-pan-served-with-sauces_140725-11952.jpg?_wi=1",              imageAlt: "Curry shrimp over rice and peas"},
@@ -159,7 +259,7 @@ export default function HomePage() {
             {
               id: "jerk-pork",              category: "Main Dishes",              title: "Jerk Pork Did Not Disappoint",              excerpt:
                 "Perfectly seasoned and grilled, bursting with island spices and authentic Jamaican flavor.",              imageSrc:
-                "http://img.b2bpic.net/free-photo/hot-spicy-grilled-pork-salad-with-berry-rice_1339-6325.jpg?_wi=1",              imageAlt: "Jerk pork platter with rice and tropical slaw",              authorName: "Caribbean Flair Team",              authorAvatar:
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-qcfdeh7f.jpg",              imageAlt: "Jerk pork platter with rice and tropical slaw",              authorName: "Caribbean Flair Team",              authorAvatar:
                 "http://img.b2bpic.net/free-photo/handsome-business-man-wearing-suit-looking-camera-smiling-broadly-with-happy-face-standing-white-background_141793-54115.jpg",              date: "Fresh Daily"},
             {
               id: "curry-goat",              category: "Featured",              title: "Curry Goat - A Community Favorite",              excerpt:
@@ -169,7 +269,7 @@ export default function HomePage() {
             {
               id: "festival-sides",              category: "Sides",              title: "Festival Dumplings & Tropical Slaw",              excerpt:
                 "Crispy, golden festival dumplings paired with our signature tropical slaw for the perfect complement.",              imageSrc:
-                "http://img.b2bpic.net/free-photo/deep-fried-samosas-rustic-crockery-plate-generated-by-ai_188544-41080.jpg?_wi=1",              imageAlt:
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-dk53z92a.jpg",              imageAlt:
                 "Festival dumplings with tropical slaw and mac and cheese",              authorName: "Caribbean Flair Team",              authorAvatar:
                 "http://img.b2bpic.net/free-photo/close-up-businessman-with-tie_1098-2867.jpg",              date: "Must Try"},
             {
@@ -185,7 +285,7 @@ export default function HomePage() {
             {
               id: "grill-action",              category: "Behind the Scenes",              title: "Fresh Off The Grill - Live Action",              excerpt:
                 "Watch our expert grill masters prepare your meal with passion, precision, and authentic Caribbean technique.",              imageSrc:
-                "http://img.b2bpic.net/free-photo/friends-having-nice-barbeque-together_23-2149271905.jpg?_wi=1",              imageAlt: "Chef grilling jerk meats on foil with smoke",              authorName: "Caribbean Flair Team",              authorAvatar:
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-y2tu4f81.jpg",              imageAlt: "Chef grilling jerk meats on foil with smoke",              authorName: "Caribbean Flair Team",              authorAvatar:
                 "http://img.b2bpic.net/free-photo/handsome-business-man-wearing-suit-looking-camera-smiling-broadly-with-happy-face-standing-white-background_141793-54115.jpg",              date: "Daily Special"},
           ]}
         />
@@ -283,7 +383,7 @@ export default function HomePage() {
           tagAnimation="slide-up"
           buttons={[
             {
-              text: "Order Online Now",              href: "/menu"},
+              text: "Order Online Now",              href: "#signature-dishes"},
             {
               text: "Call (239) 785-0423",              href: "tel:2397850423"},
           ]}
@@ -311,7 +411,7 @@ export default function HomePage() {
         />
       </div>
 
-      {/* Footer */}
+      {/* Footer with Local Map Info and Social Links */}
       <div id="footer" data-section="footer">
         <FooterMedia
           imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=1"
