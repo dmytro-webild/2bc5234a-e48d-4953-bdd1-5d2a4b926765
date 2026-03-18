@@ -22,7 +22,6 @@ import {
   Phone,
   ShoppingCart,
   X,
-  Instagram,
   MapPin,
   Clock,
 } from "lucide-react";
@@ -78,7 +77,6 @@ export default function HomePage() {
     {
       title: "Connect With Us",      items: [
         { label: "Facebook", href: "https://www.facebook.com/share/1CckZyvyXX/?mibextid=wwXIfr" },
-        { label: "Instagram", href: "https://instagram.com/caribbeanflair" },
         { label: "Privacy Policy", href: "#" },
         { label: "Terms of Service", href: "#" },
       ],
@@ -462,7 +460,7 @@ export default function HomePage() {
       {/* Owners Spotlight Section */}
       <div id="owners-spotlight" data-section="owners-spotlight">
         <TeamCardTwo
-          title="Meet the Island Visionaries"
+          title="Meet the Owners"
           description="Teria Bryant and Deb Farrell: Passionate Black-owned, women-owned entrepreneurs bringing authentic Caribbean soul to Lehigh Acres."
           tag="Community Leaders"
           tagIcon={Heart}
@@ -474,8 +472,8 @@ export default function HomePage() {
           members={[
             {
               id: "teria-bryant",              name: "Teria Bryant",              role: "Founder & Head Chef",              description:
-                "Teria brings 15+ years of Caribbean culinary expertise and authentic island passion to every dish. Her vision transformed Caribbean Flair from a dream into a premium dining destination serving Lehigh Acres with pride.",              imageSrc:
-                "data:image/svg+xml,%3Csvg xmlns=?_wi=17'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Teria Bryant, founder of Caribbean Flair",              socialLinks: [
+                "Teria brings 15+ years of Caribbean culinary expertise and authentic island passion to every dish. They transformed Caribbean Flair from a dream into a premium dining destination serving Lehigh Acres with pride.",              imageSrc:
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773857612004-vaw7ydy1.jpg",              imageAlt: "Teria Bryant, founder of Caribbean Flair",              socialLinks: [
                 {
                   icon: Facebook,
                   url: "https://www.facebook.com/share/1CckZyvyXX/?mibextid=wwXIfr"},
