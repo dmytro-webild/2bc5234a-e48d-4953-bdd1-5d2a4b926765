@@ -110,7 +110,7 @@ export default function ContactPage() {
           tag="We're Here to Help"
           tagIcon={MessageCircle}
           tagAnimation="slide-up"
-          background={{ variant: "glowing-orb" }}
+          background={{ variant: "plain" }}
           buttons={[
             {
               text: "Start Live Chat",              href: "#live-chat"},

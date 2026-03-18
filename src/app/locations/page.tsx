@@ -123,14 +123,13 @@ export default function LocationsPage() {
               ],
             },
             {
-              title: "Popular Times",              description: "Peak times for Caribbean Flair dining.",              bentoComponent: "timeline",              timelineData: {
-                heading: "Peak Hours",                subheading: "When to expect the busiest service",                items: [
-                  { label: "Lunch Rush", detail: "12 PM - 1:30 PM" },
-                  { label: "Afternoon Slow", detail: "2 PM - 4:30 PM" },
-                  { label: "Dinner Peak", detail: "6 PM - 8 PM" },
-                ],
-                completedLabel: "Current Time"},
-            },
+              title: "Popular Times",              description: "Peak times for Caribbean Flair dining.",              bentoComponent: "timeline",              items: [
+                { label: "Lunch Rush", detail: "12 PM - 1:30 PM" },
+                { label: "Afternoon Slow", detail: "2 PM - 4:30 PM" },
+                { label: "Dinner Peak", detail: "6 PM - 8 PM" },
+              ],
+              completedLabel: "Current Time"},
+            ],
           ]}
         />
       </div>
