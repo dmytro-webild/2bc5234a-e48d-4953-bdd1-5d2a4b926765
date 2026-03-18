@@ -1,127 +1,37 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleCentered from "@/components/navbar/NavbarStyleCentered/NavbarStyleCentered";
-import HeroSplit from "@/components/sections/hero/HeroSplit";
-import ProductCardFour from "@/components/sections/product/ProductCardFour";
-import TestimonialCardThirteen from "@/components/sections/testimonial/TestimonialCardThirteen";
-import FeatureCardTen from "@/components/sections/feature/FeatureCardTen";
-import FooterMedia from "@/components/sections/footer/FooterMedia";
-import {
-  Award,
-  Flame,
-  Star,
-  Zap,
-  TrendingUp,
-  Facebook,
-} from "lucide-react";
-import { useState } from "react";
+import { ArrowLeft, Lock } from "lucide-react";
 
 export default function MenuPage() {
+  const [password, setPassword] = useState("");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [error, setError] = useState("");
+
   const navItems = [
     { name: "Home", id: "home" },
-    { name: "Menu", id: "menu" },
-    { name: "About Us", id: "about" },
-    { name: "Gallery", id: "gallery" },
-    { name: "Reviews", id: "reviews" },
-    { name: "Locations", id: "locations" },
+    { name: "Menu", id: "signature-dishes" },
+    { name: "About Us", id: "owners-spotlight" },
+    { name: "Gallery", id: "featured-gallery" },
+    { name: "Reviews", id: "testimonials" },
+    { name: "Locations", id: "footer" },
   ];
 
-  const [activeCategory, setActiveCategory] = useState("mains");
-
-  const footerColumns = [
-    {
-      title: "Quick Links",      items: [
-        { label: "Home", href: "/" },
-        { label: "Menu", href: "/menu" },
-        { label: "Gallery", href: "/gallery" },
-        { label: "Reviews", href: "/" },
-      ],
-    },
-    {
-      title: "Order & Contact",      items: [
-        { label: "Order Online", href: "/menu" },
-        { label: "Call Us", href: "tel:2397850423" },
-        { label: "Locations & Hours", href: "/" },
-        { label: "Contact", href: "/" },
-      ],
-    },
-    {
-      title: "Connect With Us",      items: [
-        { label: "Facebook", href: "https://facebook.com/caribbeanflair" },
-        { label: "About Us", href: "/about" },
-        { label: "Privacy Policy", href: "/" },
-        { label: "Terms of Service", href: "/" },
-      ],
-    },
-    {
-      title: "Located In",      items: [
-        { label: "801 Leeland Heights Blvd W", href: "/" },
-        { label: "Lehigh Acres, FL 33936", href: "/" },
-        { label: "Open Until 9PM", href: "/" },
-        { label: "Delivery Available", href: "/" },
-      ],
-    },
-  ];
-
-  const menuItems = {
-    mains: [
-      {
-        id: "jerk-chicken",        name: "Jerk Chicken Platter",        price: "$15.95",        variant: "Full Rack",        imageSrc:
-          "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=1",        imageAlt: "Jerk chicken grilled on foil with spices"},
-      {
-        id: "curry-goat",        name: "Curry Goat Platter",        price: "$17.95",        variant: "Tender & Aromatic",        imageSrc:
-          "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=1",        imageAlt: "Curry goat served over rice and peas"},
-      {
-        id: "jerk-pork",        name: "Jerk Pork Platter",        price: "$16.95",        variant: "Juicy & Spiced",        imageSrc:
-          "http://img.b2bpic.net/free-photo/hot-spicy-grilled-pork-salad-with-berry-rice_1339-6325.jpg?_wi=1",        imageAlt: "Jerk pork platter with rice"},
-      {
-        id: "escovitch-fish",        name: "Escovitch Fish",        price: "$18.95",        variant: "Island Tradition",        imageSrc:
-          "http://img.b2bpic.net/free-photo/grilled-chicken-served-with-aubergine-lemon-parsley_140725-1554.jpg?_wi=1",        imageAlt: "Escovitch fish with pickled vegetables"},
-    ],
-    sandwiches: [
-      {
-        id: "jerk-chicken-sandwich",        name: "Jerk Chicken Sandwich",        price: "$11.95",        variant: "Fresh Bread",        imageSrc:
-          "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=1",        imageAlt: "Jerk chicken sandwich with slaw"},
-      {
-        id: "curry-goat-sandwich",        name: "Curry Goat Sandwich",        price: "$12.95",        variant: "Hearty & Flavorful",        imageSrc:
-          "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=1",        imageAlt: "Curry goat sandwich"},
-      {
-        id: "pulled-pork-sandwich",        name: "Pulled Pork Sandwich",        price: "$11.95",        variant: "Smoky & Tender",        imageSrc:
-          "http://img.b2bpic.net/free-photo/hot-spicy-grilled-pork-salad-with-berry-rice_1339-6325.jpg?_wi=1",        imageAlt: "Pulled pork sandwich"},
-    ],
-    sides: [
-      {
-        id: "rice-peas",        name: "Rice & Peas",        price: "$4.95",        variant: "Classic Caribbean",        imageSrc:
-          "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=1",        imageAlt: "Rice and peas side"},
-      {
-        id: "mac-cheese",        name: "Creamy Mac & Cheese",        price: "$5.95",        variant: "Comfort Classic",        imageSrc:
-          "http://img.b2bpic.net/free-photo/delicious-food-presentation_23-2151914003.jpg?_wi=1",        imageAlt: "Creamy mac and cheese"},
-      {
-        id: "festival",        name: "Festival Dumplings",        price: "$4.95",        variant: "Golden & Crispy",        imageSrc:
-          "http://img.b2bpic.net/free-photo/deep-fried-samosas-rustic-crockery-plate-generated-by-ai_188544-41080.jpg?_wi=1",        imageAlt: "Festival dumplings"},
-    ],
-    drinks: [
-      {
-        id: "sorrel-punch",        name: "Sorrel Punch",        price: "$3.95",        variant: "16 oz",        imageSrc:
-          "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1",        imageAlt: "Tropical sorrel punch"},
-      {
-        id: "ginger-beer",        name: "Island Ginger Beer",        price: "$3.95",        variant: "Refreshing",        imageSrc:
-          "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1",        imageAlt: "Ginger beer"},
-    ],
-    specials: [
-      {
-        id: "combo-1",        name: "Island Feast Combo",        price: "$22.95",        variant: "Jerk Chicken + Sides",        imageSrc:
-          "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=1",        imageAlt: "Island feast combo"},
-      {
-        id: "seafood-special",        name: "Seafood Special",        price: "$24.95",        variant: "Curry Shrimp + Sides",        imageSrc:
-          "http://img.b2bpic.net/free-photo/side-view-fried-eggs-with-shrimps-vegetables-pan-served-with-sauces_140725-11952.jpg?_wi=1",        imageAlt: "Seafood special"},
-    ],
-  };
-
-  const getMenuItems = () => {
-    return menuItems[activeCategory as keyof typeof menuItems] || [];
+  const handlePasswordSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Replace with your actual password
+    const correctPassword = "caribbean2025";
+    
+    if (password === correctPassword) {
+      setIsAuthenticated(true);
+      setError("");
+    } else {
+      setError("Incorrect password. Please try again.");
+      setPassword("");
+    }
   };
 
   return (
@@ -147,40 +57,6 @@ export default function MenuPage() {
           }
         }
 
-        @keyframes slideInFromLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-60px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes slideInFromRight {
-          from {
-            opacity: 0;
-            transform: translateX(60px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes glowHover {
-          0% {
-            box-shadow: 0 0 0px rgba(227, 68, 0, 0.4);
-          }
-          50% {
-            box-shadow: 0 0 20px rgba(227, 68, 0, 0.6);
-          }
-          100% {
-            box-shadow: 0 0 30px rgba(227, 68, 0, 0.8);
-          }
-        }
-
         html {
           scroll-behavior: smooth;
         }
@@ -188,223 +64,181 @@ export default function MenuPage() {
         body {
           animation: fadeIn 0.8s ease-out;
         }
-
-        [data-section] {
-          animation: fadeIn 1.2s ease-out forwards;
-          opacity: 0;
-        }
-
-        #hero [data-section] {
-          animation-delay: 0.1s;
-        }
-
-        #menu-categories {
-          animation-delay: 0.2s;
-        }
-
-        #testimonials {
-          animation-delay: 0.3s;
-        }
-
-        #final-cta {
-          animation-delay: 0.4s;
-        }
-
-        #footer {
-          animation-delay: 0.5s;
-        }
-
-        img {
-          animation: slideInFromRight 1s ease-out forwards;
-          opacity: 0;
-        }
-
-        #hero img {
-          animation-delay: 0.3s;
-        }
-
-        #menu-categories img {
-          animation-delay: 0.4s;
-        }
-
-        button, [role="button"], a[href*="#"], a[href*="/"] {
-          position: relative;
-          transition: all 0.3s ease;
-        }
-
-        button:hover, [role="button"]:hover, a[href*="#"]:hover, a[href*="/"]:hover {
-          animation: glowHover 0.6s ease-in-out;
-        }
-
-        .bg-gradient-to-r, .bg-primary-cta, [class*="bg-blue"], [class*="bg-orange"], [class*="bg-red"] {
-          transition: all 0.3s ease;
-        }
-
-        .bg-gradient-to-r:hover, .bg-primary-cta:hover, [class*="bg-blue"]:hover, [class*="bg-orange"]:hover, [class*="bg-red"]:hover {
-          filter: brightness(1.1);
-          animation: glowHover 0.6s ease-in-out;
-        }
       `}</style>
 
-      {/* Navbar */}
-      <div id="nav" data-section="nav">
+      {/* Navigation Bar */}
+      <div className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur-md border-b border-gray-200">
         <NavbarStyleCentered
           brandName="Caribbean Flair"
           navItems={navItems}
           button={{
-            text: "Order Now",            href: "/menu"}}
+            text: "See Full Menu",            href: "/menu"
+          }}
         />
       </div>
 
-      {/* Hero Section */}
-      <div id="hero" data-section="hero">
-        <HeroSplit
-          title="Browse Our Island Menu"
-          description="Explore authentic Caribbean flavors. From jerk meats to curry dishes, each item is crafted fresh and packed with island soul."
-          tag="Fresh Daily"
-          tagIcon={Flame}
-          tagAnimation="slide-up"
-          background={{ variant: "glowing-orb" }}
-          buttons={[
-            {
-              text: "See Full Menu",              href: "/full-menu"},
-            {
-              text: "Call to Order",              href: "tel:2397850423"},
-          ]}
-          buttonAnimation="slide-up"
-          imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg?_wi=3"
-          imageAlt="Caribbean Flair Menu"
-          mediaAnimation="opacity"
-          imagePosition="right"
-          ariaLabel="Menu page hero section"
-        />
-      </div>
+      {/* Main Content */}
+      <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+        {!isAuthenticated ? (
+          // Password Protected View
+          <div className="flex items-center justify-center min-h-[calc(100vh-80px)] px-4">
+            <div className="w-full max-w-md">
+              <div className="bg-white/90 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/20 p-8 md:p-10">
+                <div className="flex justify-center mb-6">
+                  <div className="bg-gradient-to-br from-primary-cta to-accent p-3 rounded-full">
+                    <Lock className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                
+                <h1 className="text-3xl font-bold text-center text-gray-900 mb-2">
+                  Full Menu
+                </h1>
+                <p className="text-center text-gray-600 mb-8">
+                  Enter the password to view our complete menu with all available dishes and specials.
+                </p>
 
-      {/* Menu Categories Section */}
-      <div id="menu-categories" data-section="menu-categories" className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Browse by Category</h2>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {[
-              { id: "mains", label: "Mains" },
-              { id: "sandwiches", label: "Sandwiches" },
-              { id: "sides", label: "Sides" },
-              { id: "drinks", label: "Drinks" },
-              { id: "specials", label: "Specials" },
-            ].map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={`px-6 py-2 rounded-full transition-all ${                  activeCategory === cat.id
-                    ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
-                    : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
+                <form onSubmit={handlePasswordSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                      Password
+                    </label>
+                    <input
+                      id="password"
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="Enter password"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-cta focus:border-transparent"
+                    />
+                  </div>
+
+                  {error && (
+                    <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
+                      <p className="text-sm text-red-600">{error}</p>
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-primary-cta to-accent text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    Unlock Menu
+                  </button>
+                </form>
+
+                <p className="text-center text-xs text-gray-500 mt-6">
+                  For password assistance, please contact us
+                </p>
+              </div>
+            </div>
           </div>
+        ) : (
+          // Full Menu View
+          <div className="max-w-6xl mx-auto px-4 py-12 md:py-20">
+            <div className="mb-8 flex items-center gap-4">
+              <Link
+                href="/#signature-dishes"
+                className="flex items-center gap-2 text-primary-cta hover:opacity-70 transition-opacity"
+              >
+                <ArrowLeft className="w-5 h-5" />
+                Back to Home
+              </Link>
+            </div>
 
-          <ProductCardFour
-            title={`${activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)} Selection`}
-            description={`Discover our premium ${activeCategory} offerings, each crafted with authentic Caribbean passion.`}
-            tag="Featured"
-            tagIcon={Flame}
-            tagAnimation="slide-up"
-            buttons={[
-              {
-                text: "See Full Menu",                href: "/full-menu"},
-            ]}
-            buttonAnimation="slide-up"
-            textboxLayout="default"
-            gridVariant="three-columns-all-equal-width"
-            animationType="slide-up"
-            useInvertedBackground={false}
-            products={getMenuItems()}
-          />
-        </div>
-      </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Full Menu
+            </h1>
+            <p className="text-lg text-gray-600 mb-12">
+              Discover all of our authentic Caribbean dishes, crafted with love and served fresh off the grill.
+            </p>
 
-      {/* Testimonials Section */}
-      <div id="testimonials" data-section="testimonials">
-        <TestimonialCardThirteen
-          title="What Customers Say About Our Menu"
-          description="Real reviews from real Caribbean Flair customers who love our authentic flavors."
-          tag="5-Star Rated"
-          tagIcon={Star}
-          tagAnimation="slide-up"
-          textboxLayout="default"
-          animationType="slide-up"
-          useInvertedBackground={true}
-          showRating={true}
-          testimonials={[
-            {
-              id: "review-1",              name: "Sarah Johnson",              handle: "@sarahjohn2024",              testimonial:
-                "Every dish on the menu is packed with authentic island flavor! The variety is amazing.",              rating: 5,
-              imageSrc:
-                "http://img.b2bpic.net/free-photo/young-woman-eating-delicious-tiramisu-cafe_1303-25270.jpg?_wi=1",              imageAlt: "Sarah Johnson"},
-            {
-              id: "review-2",              name: "Michael Chen",              handle: "@mikeflavorseek",              testimonial:
-                "Tried everything on the menu. Each item is better than the last. Highly recommend!",              rating: 5,
-              imageSrc:
-                "http://img.b2bpic.net/free-photo/couple-enjoying-spending-good-time-together-while-having-date-restaurant_58466-16035.jpg?_wi=1",              imageAlt: "Michael Chen"},
-            {
-              id: "review-3",              name: "Amanda Davis",              handle: "@amandataste",              testimonial:
-                "The menu showcases real Caribbean recipes. You can taste the authenticity in every bite.",              rating: 5,
-              imageSrc:
-                "http://img.b2bpic.net/free-photo/sideways-shot-attractive-curly-woman-has-happy-expression-enjoys-electronic-song-modern-headphones-has-recreation-time-reads-text-message-cell-phone_273609-3485.jpg?_wi=1",              imageAlt: "Amanda Davis"},
-          ]}
-        />
-      </div>
+            {/* Menu Sections */}
+            <div className="space-y-12">
+              {/* Main Dishes */}
+              <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 p-8 md:p-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Main Dishes</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="pb-6 border-b md:border-b-0 md:pb-0">
+                    <h3 className="text-lg font-semibold text-gray-900">Jerk Chicken Platter</h3>
+                    <p className="text-gray-600 text-sm mt-1 mb-3">Marinated in authentic Caribbean spices, grilled to perfection. Served with rice & peas, festival dumplings, and tropical slaw.</p>
+                    <p className="text-primary-cta font-bold text-lg">$15.95</p>
+                  </div>
+                  <div className="pb-6 border-b md:border-b-0 md:pb-0">
+                    <h3 className="text-lg font-semibold text-gray-900">Curry Shrimp Platter</h3>
+                    <p className="text-gray-600 text-sm mt-1 mb-3">Fresh shrimp in our signature curry sauce with Caribbean seasonings. Includes rice & peas, festival dumplings, and tropical slaw.</p>
+                    <p className="text-primary-cta font-bold text-lg">$16.95</p>
+                  </div>
+                  <div className="pb-6 md:pb-0">
+                    <h3 className="text-lg font-semibold text-gray-900">Curry Goat</h3>
+                    <p className="text-gray-600 text-sm mt-1 mb-3">Tender goat meat cooked in rich curry sauce with traditional island spices. Served with rice & peas and festival dumplings.</p>
+                    <p className="text-primary-cta font-bold text-lg">$17.95</p>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Escovitch Fish</h3>
+                    <p className="text-gray-600 text-sm mt-1 mb-3">Fresh fish prepared Jamaican style with pickled vegetables. Authentic island flavors in every bite.</p>
+                    <p className="text-primary-cta font-bold text-lg">$16.95</p>
+                  </div>
+                </div>
+              </div>
 
-      {/* Final CTA Section */}
-      <div id="final-cta" data-section="final-cta">
-        <FeatureCardTen
-          title="Ready to Order?"
-          description="Choose your favorite items from our authentic Caribbean menu and get them fresh off the grill."
-          tag="Ready to Order"
-          tagIcon={Zap}
-          tagAnimation="slide-up"
-          buttons={[
-            {
-              text: "Call (239) 785-0423",              href: "tel:2397850423"},
-            {
-              text: "Visit Us Today",              href: "/"},
-          ]}
-          buttonAnimation="slide-up"
-          textboxLayout="default"
-          animationType="slide-up"
-          useInvertedBackground={true}
-          features={[
-            {
-              id: "quality",              title: "Authentic Quality",              description:
-                "Every item prepared with premium ingredients and authentic Caribbean techniques.",              media: {
-                imageSrc:
-                  "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1"},
-              items: [
-                {
-                  icon: Zap,
-                  text: "Fresh Daily"},
-                {
-                  icon: TrendingUp,
-                  text: "Peak Quality"},
-              ],
-              reverse: false,
-            },
-          ]}
-        />
-      </div>
+              {/* Sides & Appetizers */}
+              <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 p-8 md:p-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Sides & Appetizers</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="pb-6 border-b md:border-b-0 md:pb-0">
+                    <h3 className="text-lg font-semibold text-gray-900">Conch Fritters Combo</h3>
+                    <p className="text-gray-600 text-sm mt-1 mb-3">6 pieces of golden, crispy conch fritters. Served with house-made dipping sauce.</p>
+                    <p className="text-primary-cta font-bold text-lg">$12.95</p>
+                  </div>
+                  <div className="pb-6 border-b md:border-b-0 md:pb-0">
+                    <h3 className="text-lg font-semibold text-gray-900">Festival Dumplings</h3>
+                    <p className="text-gray-600 text-sm mt-1 mb-3">Crispy, golden fried dumplings. A Caribbean classic that pairs perfectly with any main dish.</p>
+                    <p className="text-primary-cta font-bold text-lg">$4.95</p>
+                  </div>
+                  <div className="pb-6 md:pb-0">
+                    <h3 className="text-lg font-semibold text-gray-900">Creamy Island Mac & Cheese</h3>
+                    <p className="text-gray-600 text-sm mt-1 mb-3">Smooth, rich, and soul-warming. The perfect comfort food complement to our island mains.</p>
+                    <p className="text-primary-cta font-bold text-lg">$5.95</p>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Tropical Slaw</h3>
+                    <p className="text-gray-600 text-sm mt-1 mb-3">Fresh, crisp coleslaw with a tropical twist. Light and refreshing alongside any dish.</p>
+                    <p className="text-primary-cta font-bold text-lg">$3.95</p>
+                  </div>
+                </div>
+              </div>
 
-      {/* Footer */}
-      <div id="footer" data-section="footer">
-        <FooterMedia
-          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=1"
-          imageAlt="Caribbean Flair Island Jerk Grill Trailer"
-          logoText="Caribbean Flair"
-          copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
-          columns={footerColumns}
-        />
+              {/* Beverages */}
+              <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 p-8 md:p-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Beverages</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="pb-6 border-b md:border-b-0 md:pb-0">
+                    <h3 className="text-lg font-semibold text-gray-900">Island Ginger Beer</h3>
+                    <p className="text-gray-600 text-sm mt-1 mb-3">Refreshing traditional Caribbean ginger beer. Perfectly spiced and ice-cold.</p>
+                    <p className="text-primary-cta font-bold text-lg">$2.95</p>
+                  </div>
+                  <div className="pb-6 md:pb-0">
+                    <h3 className="text-lg font-semibold text-gray-900">Fresh Tropical Juice</h3>
+                    <p className="text-gray-600 text-sm mt-1 mb-3">Mango, passion fruit, or guava. Fresh squeezed island flavors in every sip.</p>
+                    <p className="text-primary-cta font-bold text-lg">$3.95</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="mt-12 bg-gradient-to-r from-primary-cta to-accent rounded-2xl shadow-lg p-8 md:p-10 text-white text-center">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Order?</h2>
+              <p className="text-white/90 mb-6">Call us at (239) 785-0423 or visit our location for fresh Caribbean flavors made to order.</p>
+              <a
+                href="tel:2397850423"
+                className="inline-block bg-white text-primary-cta px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+              >
+                Call Now
+              </a>
+            </div>
+          </div>
+        )}
       </div>
     </ThemeProvider>
   );
