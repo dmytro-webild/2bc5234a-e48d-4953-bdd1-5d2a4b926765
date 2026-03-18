@@ -77,7 +77,7 @@ export default function HomePage() {
     },
     {
       title: "Connect With Us",      items: [
-        { label: "Facebook", href: "https://facebook.com/caribbeanflair" },
+        { label: "Facebook", href: "https://www.facebook.com/share/1CckZyvyXX/?mibextid=wwXIfr" },
         { label: "Instagram", href: "https://instagram.com/caribbeanflair" },
         { label: "Privacy Policy", href: "#" },
         { label: "Terms of Service", href: "#" },
@@ -478,16 +478,16 @@ export default function HomePage() {
                 "data:image/svg+xml,%3Csvg xmlns=?_wi=17'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Teria Bryant, founder of Caribbean Flair",              socialLinks: [
                 {
                   icon: Facebook,
-                  url: "https://facebook.com/caribbeanflair"},
+                  url: "https://www.facebook.com/share/1CckZyvyXX/?mibextid=wwXIfr"},
               ],
             },
             {
               id: "deb-farrell",              name: "Deb Farrell",              role: "Co-Owner & Operations Lead",              description:
-                "Deb ensures every customer experience is smooth, welcoming, and unforgettable. Together with Teria, she's building a thriving Black- and women-owned business that celebrates Caribbean culture and community impact.",              imageSrc:
+                "Deb ensures every customer experience is smooth, welcoming, and unforgettable. Together with Teria, they are building a thriving Black- and women-owned business that celebrates Caribbean culture and community impact.",              imageSrc:
                 "data:image/svg+xml,%3Csvg xmlns=?_wi=18'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Deb Farrell, co-owner of Caribbean Flair",              socialLinks: [
                 {
                   icon: Facebook,
-                  url: "https://facebook.com/caribbeanflair"},
+                  url: "https://www.facebook.com/share/1CckZyvyXX/?mibextid=wwXIfr"},
               ],
             },
           ]}
