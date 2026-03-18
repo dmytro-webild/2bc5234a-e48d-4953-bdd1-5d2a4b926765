@@ -5,13 +5,20 @@ import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleCentered from "@/components/navbar/NavbarStyleCentered/NavbarStyleCentered";
 import HeroSplit from "@/components/sections/hero/HeroSplit";
 import ProductCardFour from "@/components/sections/product/ProductCardFour";
+import TestimonialCardThirteen from "@/components/sections/testimonial/TestimonialCardThirteen";
+import FeatureCardTen from "@/components/sections/feature/FeatureCardTen";
 import FooterMedia from "@/components/sections/footer/FooterMedia";
-import { Award, Zap } from "lucide-react";
+import {
+  Award,
+  Flame,
+  Star,
+  Zap,
+  TrendingUp,
+  Facebook,
+} from "lucide-react";
 import { useState } from "react";
 
 export default function MenuPage() {
-  const [activeCategory, setActiveCategory] = useState("mains");
-
   const navItems = [
     { name: "Home", id: "home" },
     { name: "Menu", id: "menu" },
@@ -21,18 +28,20 @@ export default function MenuPage() {
     { name: "Locations", id: "locations" },
   ];
 
+  const [activeCategory, setActiveCategory] = useState("mains");
+
   const footerColumns = [
     {
       title: "Quick Links",      items: [
         { label: "Home", href: "/" },
         { label: "Menu", href: "/menu" },
-        { label: "Gallery", href: "/" },
+        { label: "Gallery", href: "/gallery" },
         { label: "Reviews", href: "/" },
       ],
     },
     {
       title: "Order & Contact",      items: [
-        { label: "Order Online", href: "/" },
+        { label: "Order Online", href: "/menu" },
         { label: "Call Us", href: "tel:2397850423" },
         { label: "Locations & Hours", href: "/" },
         { label: "Contact", href: "/" },
@@ -59,52 +68,61 @@ export default function MenuPage() {
   const menuItems = {
     mains: [
       {
-        id: "jerk-chicken",        name: "Jerk Chicken Platter",        price: "$15.95",        variant: "Full Rack",        imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-2gw0wih3.jpg",        imageAlt: "Jerk chicken platter"},
+        id: "jerk-chicken",        name: "Jerk Chicken Platter",        price: "$15.95",        variant: "Full Rack",        imageSrc:
+          "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=1",        imageAlt: "Jerk chicken grilled on foil with spices"},
       {
-        id: "curry-goat",        name: "Curry Goat Platter",        price: "$17.95",        variant: "Premium Cut",        imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-wha24yfi.jpg",        imageAlt: "Curry goat platter"},
+        id: "curry-goat",        name: "Curry Goat Platter",        price: "$17.95",        variant: "Tender & Aromatic",        imageSrc:
+          "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=1",        imageAlt: "Curry goat served over rice and peas"},
       {
-        id: "jerk-pork",        name: "Jerk Pork Platter",        price: "$16.95",        variant: "Tender Cut",        imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-qcfdeh7f.jpg",        imageAlt: "Jerk pork platter"},
+        id: "jerk-pork",        name: "Jerk Pork Platter",        price: "$16.95",        variant: "Juicy & Spiced",        imageSrc:
+          "http://img.b2bpic.net/free-photo/hot-spicy-grilled-pork-salad-with-berry-rice_1339-6325.jpg?_wi=1",        imageAlt: "Jerk pork platter with rice"},
       {
-        id: "escovitch-fish",        name: "Escovitch Fish",        price: "$18.95",        variant: "Fresh Daily",        imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-dk53z92a.jpg",        imageAlt: "Escovitch fish"},
+        id: "escovitch-fish",        name: "Escovitch Fish",        price: "$18.95",        variant: "Island Tradition",        imageSrc:
+          "http://img.b2bpic.net/free-photo/grilled-chicken-served-with-aubergine-lemon-parsley_140725-1554.jpg?_wi=1",        imageAlt: "Escovitch fish with pickled vegetables"},
     ],
     sandwiches: [
       {
-        id: "jerk-chicken-sandwich",        name: "Jerk Chicken Sandwich",        price: "$11.95",        variant: "On Coco Bread",        imageSrc: "http://img.b2bpic.net/free-photo/side-view-fried-eggs-with-shrimps-vegetables-pan-served-with-sauces_140725-11952.jpg?_wi=1",        imageAlt: "Jerk chicken sandwich"},
+        id: "jerk-chicken-sandwich",        name: "Jerk Chicken Sandwich",        price: "$11.95",        variant: "Fresh Bread",        imageSrc:
+          "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=1",        imageAlt: "Jerk chicken sandwich with slaw"},
       {
-        id: "curry-shrimp-sandwich",        name: "Curry Shrimp Sandwich",        price: "$12.95",        variant: "Loaded",        imageSrc: "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=1",        imageAlt: "Curry shrimp sandwich"},
+        id: "curry-goat-sandwich",        name: "Curry Goat Sandwich",        price: "$12.95",        variant: "Hearty & Flavorful",        imageSrc:
+          "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=1",        imageAlt: "Curry goat sandwich"},
       {
-        id: "ackee-saltfish-sandwich",        name: "Ackee & Saltfish Sandwich",        price: "$10.95",        variant: "Traditional",        imageSrc: "http://img.b2bpic.net/free-photo/chicken-nuggets-served-with-french-fries-sauces_140725-5759.jpg?_wi=1",        imageAlt: "Ackee and saltfish sandwich"},
+        id: "pulled-pork-sandwich",        name: "Pulled Pork Sandwich",        price: "$11.95",        variant: "Smoky & Tender",        imageSrc:
+          "http://img.b2bpic.net/free-photo/hot-spicy-grilled-pork-salad-with-berry-rice_1339-6325.jpg?_wi=1",        imageAlt: "Pulled pork sandwich"},
     ],
     sides: [
       {
-        id: "rice-peas",        name: "Rice & Peas",        price: "$3.95",        variant: "Island Classic",        imageSrc: "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=1",        imageAlt: "Rice and peas"},
+        id: "rice-peas",        name: "Rice & Peas",        price: "$4.95",        variant: "Classic Caribbean",        imageSrc:
+          "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=1",        imageAlt: "Rice and peas side"},
       {
-        id: "mac-cheese",        name: "Creamy Mac & Cheese",        price: "$4.95",        variant: "Comfort Classic",        imageSrc: "http://img.b2bpic.net/free-photo/delicious-food-presentation_23-2151914003.jpg?_wi=1",        imageAlt: "Creamy mac and cheese"},
+        id: "mac-cheese",        name: "Creamy Mac & Cheese",        price: "$5.95",        variant: "Comfort Classic",        imageSrc:
+          "http://img.b2bpic.net/free-photo/delicious-food-presentation_23-2151914003.jpg?_wi=1",        imageAlt: "Creamy mac and cheese"},
       {
-        id: "festival-dumplings",        name: "Festival Dumplings",        price: "$3.50",        variant: "6 Pieces",        imageSrc: "http://img.b2bpic.net/free-photo/deep-fried-samosas-rustic-crockery-plate-generated-by-ai_188544-41080.jpg?_wi=1",        imageAlt: "Festival dumplings"},
-      {
-        id: "tropical-slaw",        name: "Tropical Slaw",        price: "$2.95",        variant: "Fresh Daily",        imageSrc: "http://img.b2bpic.net/free-photo/grilled-chicken-served-with-aubergine-lemon-parsley_140725-1554.jpg?_wi=1",        imageAlt: "Tropical slaw"},
+        id: "festival",        name: "Festival Dumplings",        price: "$4.95",        variant: "Golden & Crispy",        imageSrc:
+          "http://img.b2bpic.net/free-photo/deep-fried-samosas-rustic-crockery-plate-generated-by-ai_188544-41080.jpg?_wi=1",        imageAlt: "Festival dumplings"},
     ],
     drinks: [
       {
-        id: "ginger-beer",        name: "Island Ginger Beer",        price: "$3.50",        variant: "Refreshing",        imageSrc: "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1",        imageAlt: "Ginger beer"},
+        id: "sorrel-punch",        name: "Sorrel Punch",        price: "$3.95",        variant: "16 oz",        imageSrc:
+          "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1",        imageAlt: "Tropical sorrel punch"},
       {
-        id: "sorrel-punch",        name: "Sorrel Punch",        price: "$3.95",        variant: "Seasonal",        imageSrc: "http://img.b2bpic.net/free-photo/couple-enjoying-spending-good-time-together-while-having-date-restaurant_58466-16035.jpg?_wi=1",        imageAlt: "Sorrel punch"},
-      {
-        id: "jamaica-juice",        name: "Jamaica Juice Special",        price: "$4.50",        variant: "House Blend",        imageSrc: "http://img.b2bpic.net/free-photo/sideways-shot-attractive-curly-woman-has-happy-expression-enjoys-electronic-song-modern-headphones-has-recreation-time-reads-text-message-cell-phone_273609-3485.jpg?_wi=1",        imageAlt: "Jamaica juice special"},
+        id: "ginger-beer",        name: "Island Ginger Beer",        price: "$3.95",        variant: "Refreshing",        imageSrc:
+          "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1",        imageAlt: "Ginger beer"},
     ],
     specials: [
       {
-        id: "conch-fritters",        name: "Conch Fritters Combo",        price: "$12.95",        variant: "6 Pieces",        imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-y2tu4f81.jpg",        imageAlt: "Conch fritters combo"},
+        id: "combo-1",        name: "Island Feast Combo",        price: "$22.95",        variant: "Jerk Chicken + Sides",        imageSrc:
+          "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=1",        imageAlt: "Island feast combo"},
       {
-        id: "curry-shrimp",        name: "Curry Shrimp Platter",        price: "$16.95",        variant: "Fresh Daily",        imageSrc: "http://img.b2bpic.net/free-photo/friends-eating-barbecue_23-2148733607.jpg?_wi=1",        imageAlt: "Curry shrimp platter"},
-      {
-        id: "family-bundle",        name: "Family Island Bundle",        price: "$49.95",        variant: "Serves 4",        imageSrc: "http://img.b2bpic.net/free-photo/friends-having-nice-barbeque-together_23-2149271905.jpg?_wi=1",        imageAlt: "Family island bundle"},
+        id: "seafood-special",        name: "Seafood Special",        price: "$24.95",        variant: "Curry Shrimp + Sides",        imageSrc:
+          "http://img.b2bpic.net/free-photo/side-view-fried-eggs-with-shrimps-vegetables-pan-served-with-sauces_140725-11952.jpg?_wi=1",        imageAlt: "Seafood special"},
     ],
   };
 
-  const categoryLabels = {
-    mains: "Mains",    sandwiches: "Sandwiches",    sides: "Sides",    drinks: "Drinks",    specials: "Specials"};
+  const getMenuItems = () => {
+    return menuItems[activeCategory as keyof typeof menuItems] || [];
+  };
 
   return (
     <ThemeProvider
@@ -132,106 +150,138 @@ export default function MenuPage() {
       {/* Hero Section */}
       <div id="hero" data-section="hero">
         <HeroSplit
-          title="Explore Our Island Menu"
-          description="Authentic Caribbean flavors crafted fresh daily. Browse our full selection of signature dishes, fresh sides, and island refreshments."
-          tag="Interactive Menu"
-          tagIcon={Award}
+          title="Browse Our Island Menu"
+          description="Explore authentic Caribbean flavors. From jerk meats to curry dishes, each item is crafted fresh and packed with island soul."
+          tag="Fresh Daily"
+          tagIcon={Flame}
           tagAnimation="slide-up"
           background={{ variant: "glowing-orb" }}
           buttons={[
             {
-              text: "Order Online Now",              href: "#"},
+              text: "Call to Order",              href: "tel:2397850423"},
           ]}
           buttonAnimation="slide-up"
           imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg"
           imageAlt="Caribbean Flair Menu"
           mediaAnimation="opacity"
           imagePosition="right"
-          ariaLabel="Menu hero section"
+          ariaLabel="Menu page hero section"
         />
       </div>
 
-      {/* Interactive Menu with Tabs */}
-      <div id="menu-items" data-section="menu-items" className="w-full py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          {/* Category Tabs */}
-          <div className="flex flex-wrap gap-3 justify-center mb-12">
-            {Object.entries(categoryLabels).map(([key, label]) => (
+      {/* Menu Categories Section */}
+      <div id="menu-categories" data-section="menu-categories" className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Browse by Category</h2>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {[
+              { id: "mains", label: "Mains" },
+              { id: "sandwiches", label: "Sandwiches" },
+              { id: "sides", label: "Sides" },
+              { id: "drinks", label: "Drinks" },
+              { id: "specials", label: "Specials" },
+            ].map((cat) => (
               <button
-                key={key}
-                onClick={() => setActiveCategory(key)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                  activeCategory === key
-                    ? "bg-[var(--primary-cta)] text-white shadow-lg"
-                    : "bg-[var(--card)] text-[var(--foreground)] hover:bg-[var(--background-accent)]"
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`px-6 py-2 rounded-full transition-all ${
+                  activeCategory === cat.id
+                    ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
+                    : "bg-gray-200 text-gray-800 hover:bg-gray-300"
                 }`}
-                aria-pressed={activeCategory === key}
               >
-                {label}
+                {cat.label}
               </button>
             ))}
           </div>
 
-          {/* Menu Items Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {menuItems[activeCategory as keyof typeof menuItems]?.map((item) => (
-              <div
-                key={item.id}
-                className="bg-[var(--card)] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
-              >
-                <div className="relative overflow-hidden h-48 bg-[var(--background-accent)]">
-                  <img
-                    src={item.imageSrc}
-                    alt={item.imageAlt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-[var(--foreground)] mb-1">
-                    {item.name}
-                  </h3>
-                  <p className="text-sm text-[var(--foreground)] opacity-70 mb-3">
-                    {item.variant}
-                  </p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-[var(--primary-cta)]">
-                      {item.price}
-                    </span>
-                    <button className="bg-[var(--primary-cta)] text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">
-                      Add
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ProductCardFour
+            title={`${activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)} Selection`}
+            description={`Discover our premium ${activeCategory} offerings, each crafted with authentic Caribbean passion.`}
+            tag="Featured"
+            tagIcon={Flame}
+            tagAnimation="slide-up"
+            buttons={[
+              {
+                text: "Order This Item",                href: "/menu"},
+            ]}
+            buttonAnimation="slide-up"
+            textboxLayout="default"
+            gridVariant="three-columns-all-equal-width"
+            animationType="slide-up"
+            useInvertedBackground={false}
+            products={getMenuItems()}
+          />
         </div>
       </div>
 
-      {/* Featured Products */}
-      <div id="featured-menu" data-section="featured-menu">
-        <ProductCardFour
-          title="Customer Favorites"
-          description="Our most ordered dishes that keep customers coming back for authentic Caribbean excellence."
-          tag="Top Picks"
+      {/* Testimonials Section */}
+      <div id="testimonials" data-section="testimonials">
+        <TestimonialCardThirteen
+          title="What Customers Say About Our Menu"
+          description="Real reviews from real Caribbean Flair customers who love our authentic flavors."
+          tag="5-Star Rated"
+          tagIcon={Star}
+          tagAnimation="slide-up"
+          textboxLayout="default"
+          animationType="slide-up"
+          useInvertedBackground={true}
+          showRating={true}
+          testimonials={[
+            {
+              id: "review-1",              name: "Sarah Johnson",              handle: "@sarahjohn2024",              testimonial:
+                "Every dish on the menu is packed with authentic island flavor! The variety is amazing.",              rating: 5,
+              imageSrc:
+                "http://img.b2bpic.net/free-photo/young-woman-eating-delicious-tiramisu-cafe_1303-25270.jpg?_wi=1",              imageAlt: "Sarah Johnson"},
+            {
+              id: "review-2",              name: "Michael Chen",              handle: "@mikeflavorseek",              testimonial:
+                "Tried everything on the menu. Each item is better than the last. Highly recommend!",              rating: 5,
+              imageSrc:
+                "http://img.b2bpic.net/free-photo/couple-enjoying-spending-good-time-together-while-having-date-restaurant_58466-16035.jpg?_wi=1",              imageAlt: "Michael Chen"},
+            {
+              id: "review-3",              name: "Amanda Davis",              handle: "@amandataste",              testimonial:
+                "The menu showcases real Caribbean recipes. You can taste the authenticity in every bite.",              rating: 5,
+              imageSrc:
+                "http://img.b2bpic.net/free-photo/sideways-shot-attractive-curly-woman-has-happy-expression-enjoys-electronic-song-modern-headphones-has-recreation-time-reads-text-message-cell-phone_273609-3485.jpg?_wi=1",              imageAlt: "Amanda Davis"},
+          ]}
+        />
+      </div>
+
+      {/* Final CTA Section */}
+      <div id="final-cta" data-section="final-cta">
+        <FeatureCardTen
+          title="Ready to Order?"
+          description="Choose your favorite items from our authentic Caribbean menu and get them fresh off the grill."
+          tag="Ready to Order"
           tagIcon={Zap}
           tagAnimation="slide-up"
           buttons={[
             {
-              text: "Browse Full Menu",              href: "#menu-items"},
+              text: "Call (239) 785-0423",              href: "tel:2397850423"},
+            {
+              text: "Visit Us Today",              href: "/"},
           ]}
           buttonAnimation="slide-up"
           textboxLayout="default"
-          gridVariant="three-columns-all-equal-width"
           animationType="slide-up"
-          useInvertedBackground={false}
-          products={[
+          useInvertedBackground={true}
+          features={[
             {
-              id: "jerk-chicken",              name: "Jerk Chicken Platter",              price: "$15.95",              variant: "Full Rack",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-2gw0wih3.jpg",              imageAlt: "Jerk chicken platter"},
-            {
-              id: "curry-shrimp",              name: "Curry Shrimp Platter",              price: "$16.95",              variant: "Fresh Daily",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-wha24yfi.jpg",              imageAlt: "Curry shrimp platter"},
-            {
-              id: "conch-fritters",              name: "Conch Fritters Combo",              price: "$12.95",              variant: "6 Pieces",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-y2tu4f81.jpg",              imageAlt: "Conch fritters combo"},
+              id: "quality",              title: "Authentic Quality",              description:
+                "Every item prepared with premium ingredients and authentic Caribbean techniques.",              media: {
+                imageSrc:
+                  "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1"},
+              items: [
+                {
+                  icon: Zap,
+                  text: "Fresh Daily"},
+                {
+                  icon: TrendingUp,
+                  text: "Peak Quality"},
+              ],
+              reverse: false,
+            },
           ]}
         />
       </div>
