@@ -137,6 +137,115 @@ export default function MenuPage() {
       secondaryButtonStyle="glass"
       headingFontWeight="medium"
     >
+      <style>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideInFromLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-60px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideInFromRight {
+          from {
+            opacity: 0;
+            transform: translateX(60px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes glowHover {
+          0% {
+            box-shadow: 0 0 0px rgba(227, 68, 0, 0.4);
+          }
+          50% {
+            box-shadow: 0 0 20px rgba(227, 68, 0, 0.6);
+          }
+          100% {
+            box-shadow: 0 0 30px rgba(227, 68, 0, 0.8);
+          }
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          animation: fadeIn 0.8s ease-out;
+        }
+
+        [data-section] {
+          animation: fadeIn 1.2s ease-out forwards;
+          opacity: 0;
+        }
+
+        #hero [data-section] {
+          animation-delay: 0.1s;
+        }
+
+        #menu-categories {
+          animation-delay: 0.2s;
+        }
+
+        #testimonials {
+          animation-delay: 0.3s;
+        }
+
+        #final-cta {
+          animation-delay: 0.4s;
+        }
+
+        #footer {
+          animation-delay: 0.5s;
+        }
+
+        img {
+          animation: slideInFromRight 1s ease-out forwards;
+          opacity: 0;
+        }
+
+        #hero img {
+          animation-delay: 0.3s;
+        }
+
+        #menu-categories img {
+          animation-delay: 0.4s;
+        }
+
+        button, [role="button"], a[href*="#"], a[href*="/"] {
+          position: relative;
+          transition: all 0.3s ease;
+        }
+
+        button:hover, [role="button"]:hover, a[href*="#"]:hover, a[href*="/"]:hover {
+          animation: glowHover 0.6s ease-in-out;
+        }
+
+        .bg-gradient-to-r, .bg-primary-cta, [class*="bg-blue"], [class*="bg-orange"], [class*="bg-red"] {
+          transition: all 0.3s ease;
+        }
+
+        .bg-gradient-to-r:hover, .bg-primary-cta:hover, [class*="bg-blue"]:hover, [class*="bg-orange"]:hover, [class*="bg-red"]:hover {
+          filter: brightness(1.1);
+          animation: glowHover 0.6s ease-in-out;
+        }
+      `}</style>
+
       {/* Navbar */}
       <div id="nav" data-section="nav">
         <NavbarStyleCentered
@@ -185,8 +294,7 @@ export default function MenuPage() {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-6 py-2 rounded-full transition-all ${
-                  activeCategory === cat.id
+                className={`px-6 py-2 rounded-full transition-all ${                  activeCategory === cat.id
                     ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
                     : "bg-gray-200 text-gray-800 hover:bg-gray-300"
                 }`}
