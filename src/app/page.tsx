@@ -313,7 +313,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <div id="hero" data-section="hero">
         <HeroSplit
-          title="Authentic Jamaican Island Flavors in Lehigh Acres"
+          title="Caribbean Flair Island"
           description="Fresh off the grill. Jerk, curry, and soul food made with love by Teria Bryant & Deb Farrell. Experience premium Caribbean fusion like never before."
           tag="Black & Women-Owned"
           tagIcon={Award}
