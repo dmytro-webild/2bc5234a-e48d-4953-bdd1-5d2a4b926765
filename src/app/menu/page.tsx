@@ -3,10 +3,20 @@
 import Link from "next/link";
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleCentered from "@/components/navbar/NavbarStyleCentered/NavbarStyleCentered";
+import HeroSplit from "@/components/sections/hero/HeroSplit";
 import ProductCardFour from "@/components/sections/product/ProductCardFour";
+import TestimonialCardThirteen from "@/components/sections/testimonial/TestimonialCardThirteen";
 import FeatureCardTen from "@/components/sections/feature/FeatureCardTen";
 import FooterMedia from "@/components/sections/footer/FooterMedia";
-import { Flame, Zap, TrendingUp } from "lucide-react";
+import {
+  Award,
+  Flame,
+  Star,
+  Zap,
+  TrendingUp,
+  Facebook,
+} from "lucide-react";
+import { useState } from "react";
 
 export default function MenuPage() {
   const navItems = [
@@ -18,37 +28,35 @@ export default function MenuPage() {
     { name: "Locations", id: "locations" },
   ];
 
+  const [activeCategory, setActiveCategory] = useState("mains");
+
   const footerColumns = [
     {
-      title: "Quick Links",
-      items: [
+      title: "Quick Links",      items: [
         { label: "Home", href: "/" },
         { label: "Menu", href: "/menu" },
-        { label: "Gallery", href: "/" },
+        { label: "Gallery", href: "/gallery" },
         { label: "Reviews", href: "/" },
       ],
     },
     {
-      title: "Order & Contact",
-      items: [
-        { label: "Order Online", href: "/" },
+      title: "Order & Contact",      items: [
+        { label: "Order Online", href: "/menu" },
         { label: "Call Us", href: "tel:2397850423" },
         { label: "Locations & Hours", href: "/" },
         { label: "Contact", href: "/" },
       ],
     },
     {
-      title: "Connect With Us",
-      items: [
+      title: "Connect With Us",      items: [
         { label: "Facebook", href: "https://facebook.com/caribbeanflair" },
-        { label: "About Us", href: "/" },
+        { label: "About Us", href: "/about" },
         { label: "Privacy Policy", href: "/" },
         { label: "Terms of Service", href: "/" },
       ],
     },
     {
-      title: "Located In",
-      items: [
+      title: "Located In",      items: [
         { label: "801 Leeland Heights Blvd W", href: "/" },
         { label: "Lehigh Acres, FL 33936", href: "/" },
         { label: "Open Until 9PM", href: "/" },
@@ -56,6 +64,65 @@ export default function MenuPage() {
       ],
     },
   ];
+
+  const menuItems = {
+    mains: [
+      {
+        id: "jerk-chicken",        name: "Jerk Chicken Platter",        price: "$15.95",        variant: "Full Rack",        imageSrc:
+          "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=1",        imageAlt: "Jerk chicken grilled on foil with spices"},
+      {
+        id: "curry-goat",        name: "Curry Goat Platter",        price: "$17.95",        variant: "Tender & Aromatic",        imageSrc:
+          "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=1",        imageAlt: "Curry goat served over rice and peas"},
+      {
+        id: "jerk-pork",        name: "Jerk Pork Platter",        price: "$16.95",        variant: "Juicy & Spiced",        imageSrc:
+          "http://img.b2bpic.net/free-photo/hot-spicy-grilled-pork-salad-with-berry-rice_1339-6325.jpg?_wi=1",        imageAlt: "Jerk pork platter with rice"},
+      {
+        id: "escovitch-fish",        name: "Escovitch Fish",        price: "$18.95",        variant: "Island Tradition",        imageSrc:
+          "http://img.b2bpic.net/free-photo/grilled-chicken-served-with-aubergine-lemon-parsley_140725-1554.jpg?_wi=1",        imageAlt: "Escovitch fish with pickled vegetables"},
+    ],
+    sandwiches: [
+      {
+        id: "jerk-chicken-sandwich",        name: "Jerk Chicken Sandwich",        price: "$11.95",        variant: "Fresh Bread",        imageSrc:
+          "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=1",        imageAlt: "Jerk chicken sandwich with slaw"},
+      {
+        id: "curry-goat-sandwich",        name: "Curry Goat Sandwich",        price: "$12.95",        variant: "Hearty & Flavorful",        imageSrc:
+          "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=1",        imageAlt: "Curry goat sandwich"},
+      {
+        id: "pulled-pork-sandwich",        name: "Pulled Pork Sandwich",        price: "$11.95",        variant: "Smoky & Tender",        imageSrc:
+          "http://img.b2bpic.net/free-photo/hot-spicy-grilled-pork-salad-with-berry-rice_1339-6325.jpg?_wi=1",        imageAlt: "Pulled pork sandwich"},
+    ],
+    sides: [
+      {
+        id: "rice-peas",        name: "Rice & Peas",        price: "$4.95",        variant: "Classic Caribbean",        imageSrc:
+          "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=1",        imageAlt: "Rice and peas side"},
+      {
+        id: "mac-cheese",        name: "Creamy Mac & Cheese",        price: "$5.95",        variant: "Comfort Classic",        imageSrc:
+          "http://img.b2bpic.net/free-photo/delicious-food-presentation_23-2151914003.jpg?_wi=1",        imageAlt: "Creamy mac and cheese"},
+      {
+        id: "festival",        name: "Festival Dumplings",        price: "$4.95",        variant: "Golden & Crispy",        imageSrc:
+          "http://img.b2bpic.net/free-photo/deep-fried-samosas-rustic-crockery-plate-generated-by-ai_188544-41080.jpg?_wi=1",        imageAlt: "Festival dumplings"},
+    ],
+    drinks: [
+      {
+        id: "sorrel-punch",        name: "Sorrel Punch",        price: "$3.95",        variant: "16 oz",        imageSrc:
+          "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1",        imageAlt: "Tropical sorrel punch"},
+      {
+        id: "ginger-beer",        name: "Island Ginger Beer",        price: "$3.95",        variant: "Refreshing",        imageSrc:
+          "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1",        imageAlt: "Ginger beer"},
+    ],
+    specials: [
+      {
+        id: "combo-1",        name: "Island Feast Combo",        price: "$22.95",        variant: "Jerk Chicken + Sides",        imageSrc:
+          "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=1",        imageAlt: "Island feast combo"},
+      {
+        id: "seafood-special",        name: "Seafood Special",        price: "$24.95",        variant: "Curry Shrimp + Sides",        imageSrc:
+          "http://img.b2bpic.net/free-photo/side-view-fried-eggs-with-shrimps-vegetables-pan-served-with-sauces_140725-11952.jpg?_wi=1",        imageAlt: "Seafood special"},
+    ],
+  };
+
+  const getMenuItems = () => {
+    return menuItems[activeCategory as keyof typeof menuItems] || [];
+  };
 
   return (
     <ThemeProvider
@@ -76,107 +143,124 @@ export default function MenuPage() {
           brandName="Caribbean Flair"
           navItems={navItems}
           button={{
-            text: "Order Now",
-            href: "/menu",
-          }}
+            text: "Order Now",            href: "/menu"}}
         />
       </div>
 
-      {/* Full Menu Section */}
-      <div id="full-menu" data-section="full-menu">
-        <ProductCardFour
-          title="Complete Island Menu"
-          description="Explore our full range of authentic Caribbean dishes, from mains to sides. Every item is prepared fresh to order with premium island ingredients."
-          tag="All Dishes"
+      {/* Hero Section */}
+      <div id="hero" data-section="hero">
+        <HeroSplit
+          title="Browse Our Island Menu"
+          description="Explore authentic Caribbean flavors. From jerk meats to curry dishes, each item is crafted fresh and packed with island soul."
+          tag="Fresh Daily"
           tagIcon={Flame}
           tagAnimation="slide-up"
+          background={{ variant: "glowing-orb" }}
           buttons={[
             {
-              text: "Back to Home",
-              href: "/",
-            },
+              text: "Call to Order",              href: "tel:2397850423"},
           ]}
           buttonAnimation="slide-up"
+          imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg"
+          imageAlt="Caribbean Flair Menu"
+          mediaAnimation="opacity"
+          imagePosition="right"
+          ariaLabel="Menu page hero section"
+        />
+      </div>
+
+      {/* Menu Categories Section */}
+      <div id="menu-categories" data-section="menu-categories" className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Browse by Category</h2>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {[
+              { id: "mains", label: "Mains" },
+              { id: "sandwiches", label: "Sandwiches" },
+              { id: "sides", label: "Sides" },
+              { id: "drinks", label: "Drinks" },
+              { id: "specials", label: "Specials" },
+            ].map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`px-6 py-2 rounded-full transition-all ${
+                  activeCategory === cat.id
+                    ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
+                    : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+
+          <ProductCardFour
+            title={`${activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)} Selection`}
+            description={`Discover our premium ${activeCategory} offerings, each crafted with authentic Caribbean passion.`}
+            tag="Featured"
+            tagIcon={Flame}
+            tagAnimation="slide-up"
+            buttons={[
+              {
+                text: "Order This Item",                href: "/menu"},
+            ]}
+            buttonAnimation="slide-up"
+            textboxLayout="default"
+            gridVariant="three-columns-all-equal-width"
+            animationType="slide-up"
+            useInvertedBackground={false}
+            products={getMenuItems()}
+          />
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div id="testimonials" data-section="testimonials">
+        <TestimonialCardThirteen
+          title="What Customers Say About Our Menu"
+          description="Real reviews from real Caribbean Flair customers who love our authentic flavors."
+          tag="5-Star Rated"
+          tagIcon={Star}
+          tagAnimation="slide-up"
           textboxLayout="default"
-          gridVariant="bento-grid"
           animationType="slide-up"
-          useInvertedBackground={false}
-          products={[
+          useInvertedBackground={true}
+          showRating={true}
+          testimonials={[
             {
-              id: "jerk-chicken",
-              name: "Jerk Chicken Platter",
-              price: "$15.95",
-              variant: "Full Rack",
+              id: "review-1",              name: "Sarah Johnson",              handle: "@sarahjohn2024",              testimonial:
+                "Every dish on the menu is packed with authentic island flavor! The variety is amazing.",              rating: 5,
               imageSrc:
-                "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=2",
-              imageAlt: "Jerk chicken grilled on foil with spices",
-            },
+                "http://img.b2bpic.net/free-photo/young-woman-eating-delicious-tiramisu-cafe_1303-25270.jpg?_wi=1",              imageAlt: "Sarah Johnson"},
             {
-              id: "curry-shrimp",
-              name: "Curry Shrimp Platter",
-              price: "$16.95",
-              variant: "Fresh Daily",
+              id: "review-2",              name: "Michael Chen",              handle: "@mikeflavorseek",              testimonial:
+                "Tried everything on the menu. Each item is better than the last. Highly recommend!",              rating: 5,
               imageSrc:
-                "http://img.b2bpic.net/free-photo/side-view-fried-eggs-with-shrimps-vegetables-pan-served-with-sauces_140725-11952.jpg?_wi=2",
-              imageAlt: "Curry shrimp over rice and peas",
-            },
+                "http://img.b2bpic.net/free-photo/couple-enjoying-spending-good-time-together-while-having-date-restaurant_58466-16035.jpg?_wi=1",              imageAlt: "Michael Chen"},
             {
-              id: "conch-fritters",
-              name: "Conch Fritters Combo",
-              price: "$12.95",
-              variant: "6 Pieces",
+              id: "review-3",              name: "Amanda Davis",              handle: "@amandataste",              testimonial:
+                "The menu showcases real Caribbean recipes. You can taste the authenticity in every bite.",              rating: 5,
               imageSrc:
-                "http://img.b2bpic.net/free-photo/chicken-nuggets-served-with-french-fries-sauces_140725-5759.jpg?_wi=2",
-              imageAlt: "Golden conch fritters with dipping sauce",
-            },
-            {
-              id: "jerk-pork",
-              name: "Jerk Pork Platter",
-              price: "$16.95",
-              variant: "Premium Cut",
-              imageSrc:
-                "http://img.b2bpic.net/free-photo/hot-spicy-grilled-pork-salad-with-berry-rice_1339-6325.jpg?_wi=2",
-              imageAlt: "Jerk pork platter with rice and tropical slaw",
-            },
-            {
-              id: "curry-goat",
-              name: "Curry Goat Stew",
-              price: "$17.95",
-              variant: "Traditional Recipe",
-              imageSrc:
-                "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=2",
-              imageAlt: "Rich curry goat served over rice and peas",
-            },
-            {
-              id: "festival-sides",
-              name: "Festival & Slaw Combo",
-              price: "$8.95",
-              variant: "Sides Bundle",
-              imageSrc:
-                "http://img.b2bpic.net/free-photo/deep-fried-samosas-rustic-crockery-plate-generated-by-ai_188544-41080.jpg?_wi=2",
-              imageAlt: "Festival dumplings with tropical slaw and mac and cheese",
-            },
+                "http://img.b2bpic.net/free-photo/sideways-shot-attractive-curly-woman-has-happy-expression-enjoys-electronic-song-modern-headphones-has-recreation-time-reads-text-message-cell-phone_273609-3485.jpg?_wi=1",              imageAlt: "Amanda Davis"},
           ]}
         />
       </div>
 
-      {/* Order CTA Section */}
-      <div id="order-cta" data-section="order-cta">
+      {/* Final CTA Section */}
+      <div id="final-cta" data-section="final-cta">
         <FeatureCardTen
           title="Ready to Order?"
-          description="Browse our full menu above and place your order now. Call us or order online for fast, hot, and fresh Caribbean island cuisine delivered straight to your door."
-          tag="Quick Order"
+          description="Choose your favorite items from our authentic Caribbean menu and get them fresh off the grill."
+          tag="Ready to Order"
           tagIcon={Zap}
           tagAnimation="slide-up"
           buttons={[
             {
-              text: "Order Online",
-              href: "/menu",
-            },
+              text: "Call (239) 785-0423",              href: "tel:2397850423"},
             {
-              text: "Call (239) 785-0423",
-              href: "tel:2397850423",
-            },
+              text: "Visit Us Today",              href: "/"},
           ]}
           buttonAnimation="slide-up"
           textboxLayout="default"
@@ -184,23 +268,17 @@ export default function MenuPage() {
           useInvertedBackground={true}
           features={[
             {
-              id: "order-simple",
-              title: "Simple & Fast",
-              description:
-                "Order online or call. Your meal is prepared fresh and ready for pickup or delivery.",
-              media: {
+              id: "quality",              title: "Authentic Quality",              description:
+                "Every item prepared with premium ingredients and authentic Caribbean techniques.",              media: {
                 imageSrc:
-                  "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=2",
-              },
+                  "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1"},
               items: [
                 {
                   icon: Zap,
-                  text: "Quick service",
-                },
+                  text: "Fresh Daily"},
                 {
                   icon: TrendingUp,
-                  text: "Always fresh",
-                },
+                  text: "Peak Quality"},
               ],
               reverse: false,
             },
@@ -211,7 +289,7 @@ export default function MenuPage() {
       {/* Footer */}
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=2"
+          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=1"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
           copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
