@@ -107,7 +107,7 @@ export default function ContactPage() {
               title: "Call Us Directly",
               description: "Speak with our team for custom orders, catering, or any questions about our authentic Caribbean menu.",
               media: {
-                imageSrc: "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg",
+                imageSrc: "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=4",
               },
               items: [
                 {
@@ -152,7 +152,7 @@ export default function ContactPage() {
               title: "Lehigh Acres, Florida",
               description: "Experience premium Caribbean fusion at our convenient Lehigh Acres location. Fresh-grilled authentic island cuisine made with love and expertise.",
               media: {
-                imageSrc: "http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg",
+                imageSrc: "http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=8",
               },
               items: [
                 {
@@ -172,7 +172,7 @@ export default function ContactPage() {
 
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg"
+          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=9"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
           copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
