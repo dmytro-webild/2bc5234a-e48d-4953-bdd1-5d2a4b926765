@@ -146,7 +146,7 @@ export default function AboutPage() {
               text: "Order Now",              href: "/menu"},
           ]}
           buttonAnimation="slide-up"
-          imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg"
+          imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg?_wi=1"
           imageAlt="Caribbean Flair About Us"
           mediaAnimation="opacity"
           imagePosition="right"
