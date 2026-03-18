@@ -267,6 +267,8 @@ export default function MenuPage() {
           background={{ variant: "glowing-orb" }}
           buttons={[
             {
+              text: "See Full Menu",              href: "/full-menu"},
+            {
               text: "Call to Order",              href: "tel:2397850423"},
           ]}
           buttonAnimation="slide-up"
@@ -312,7 +314,7 @@ export default function MenuPage() {
             tagAnimation="slide-up"
             buttons={[
               {
-                text: "Order This Item",                href: "/menu"},
+                text: "See Full Menu",                href: "/full-menu"},
             ]}
             buttonAnimation="slide-up"
             textboxLayout="default"
