@@ -104,7 +104,7 @@ export default function OrderPage() {
               name: "Jerk Chicken Platter",
               price: "$15.95",
               variant: "Full Rack",
-              imageSrc: "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=3",
               imageAlt: "Jerk chicken grilled on foil with spices",
               onProductClick: undefined,
               onFavorite: undefined,
@@ -115,7 +115,7 @@ export default function OrderPage() {
               name: "Curry Shrimp Platter",
               price: "$16.95",
               variant: "Fresh Daily",
-              imageSrc: "http://img.b2bpic.net/free-photo/side-view-fried-eggs-with-shrimps-vegetables-pan-served-with-sauces_140725-11952.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/side-view-fried-eggs-with-shrimps-vegetables-pan-served-with-sauces_140725-11952.jpg?_wi=4",
               imageAlt: "Curry shrimp over rice and peas",
               onProductClick: undefined,
               onFavorite: undefined,
@@ -126,7 +126,7 @@ export default function OrderPage() {
               name: "Conch Fritters Combo",
               price: "$12.95",
               variant: "6 Pieces",
-              imageSrc: "http://img.b2bpic.net/free-photo/chicken-nuggets-served-with-french-fries-sauces_140725-5759.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/chicken-nuggets-served-with-french-fries-sauces_140725-5759.jpg?_wi=3",
               imageAlt: "Golden conch fritters with dipping sauce",
               onProductClick: undefined,
               onFavorite: undefined,
@@ -160,7 +160,7 @@ export default function OrderPage() {
               name: "Jerk Pork Festival Combo",
               price: "$17.95",
               variant: "Complete Platter",
-              imageSrc: "http://img.b2bpic.net/free-photo/hot-spicy-grilled-pork-salad-with-berry-rice_1339-6325.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/hot-spicy-grilled-pork-salad-with-berry-rice_1339-6325.jpg?_wi=4",
               imageAlt: "Jerk pork platter with rice and tropical slaw",
               onProductClick: undefined,
               onFavorite: undefined,
@@ -171,7 +171,7 @@ export default function OrderPage() {
               name: "Curry Goat Island Feast",
               price: "$18.95",
               variant: "Family Style",
-              imageSrc: "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=4",
               imageAlt: "Rich curry goat served over rice and peas",
               onProductClick: undefined,
               onFavorite: undefined,
@@ -182,7 +182,7 @@ export default function OrderPage() {
               name: "Escovitch Fish Special",
               price: "$16.95",
               variant: "Fresh Catch",
-              imageSrc: "http://img.b2bpic.net/free-photo/grilled-chicken-served-with-aubergine-lemon-parsley_140725-1554.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/grilled-chicken-served-with-aubergine-lemon-parsley_140725-1554.jpg?_wi=3",
               imageAlt: "Escovitch fish with pickled vegetables and lime",
               onProductClick: undefined,
               onFavorite: undefined,
@@ -193,7 +193,7 @@ export default function OrderPage() {
               name: "Seafood Festival Platter",
               price: "$19.95",
               variant: "Premium Mix",
-              imageSrc: "http://img.b2bpic.net/free-photo/deep-fried-samosas-rustic-crockery-plate-generated-by-ai_188544-41080.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/deep-fried-samosas-rustic-crockery-plate-generated-by-ai_188544-41080.jpg?_wi=4",
               imageAlt: "Festival dumplings with tropical slaw and mac and cheese",
               onProductClick: undefined,
               onFavorite: undefined,
@@ -205,7 +205,7 @@ export default function OrderPage() {
 
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg"
+          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=10"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
           copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"

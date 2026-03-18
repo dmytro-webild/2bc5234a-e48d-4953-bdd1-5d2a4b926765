@@ -108,7 +108,7 @@ export default function LocationsPage() {
               title: "Lehigh Acres Location",
               description: "Our flagship Caribbean Flair trailer serves the community daily with premium Jamaican jerk, curry, and soul food crafted with authentic island passion.",
               media: {
-                imageSrc: "http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg",
+                imageSrc: "http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=6",
                 imageAlt: "Caribbean Flair trailer in Lehigh Acres",
               },
               items: [
@@ -143,7 +143,7 @@ export default function LocationsPage() {
               category: "Weekday Schedule",
               title: "Monday - Friday Hours",
               excerpt: "Open from 11AM to 9PM. Perfect for lunch breaks, after-work dinners, and Caribbean cravings throughout your weekday.",
-              imageSrc: "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=3",
               imageAlt: "fast food service preparation",
               authorName: "Caribbean Flair Team",
               authorAvatar: "http://img.b2bpic.net/free-photo/handsome-business-man-wearing-suit-looking-camera-smiling-broadly-with-happy-face-standing-white-background_141793-54115.jpg",
@@ -155,7 +155,7 @@ export default function LocationsPage() {
               category: "Weekend Schedule",
               title: "Saturday & Sunday Hours",
               excerpt: "Extended weekend hours from 10AM to 10PM. More time to enjoy authentic Caribbean cuisine with family and friends.",
-              imageSrc: "http://img.b2bpic.net/free-photo/friends-having-nice-barbeque-together_23-2149271905.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/friends-having-nice-barbeque-together_23-2149271905.jpg?_wi=4",
               imageAlt: "friends enjoying food together",
               authorName: "Caribbean Flair Team",
               authorAvatar: "http://img.b2bpic.net/free-photo/colorful-avatars_23-2147502919.jpg",
@@ -179,7 +179,7 @@ export default function LocationsPage() {
               category: "Special Services",
               title: "Catering & Private Events",
               excerpt: "Bring Caribbean Flair to your events! Perfect for parties, corporate gatherings, and celebrations. Contact us for custom catering packages.",
-              imageSrc: "http://img.b2bpic.net/free-photo/friends-eating-barbecue_23-2148733607.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/friends-eating-barbecue_23-2148733607.jpg?_wi=4",
               imageAlt: "group enjoying caribbean food celebration",
               authorName: "Caribbean Flair Team",
               authorAvatar: "http://img.b2bpic.net/free-photo/young-male-holding-hands-pockets-white-shirt-jacket-looking-elegant-front-view_176474-99655.jpg",
@@ -216,7 +216,7 @@ export default function LocationsPage() {
 
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg"
+          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=7"
           imageAlt="red food trailer caribbean palm tree evening"
           logoText="Caribbean Flair"
           copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"

@@ -108,7 +108,7 @@ export default function MenuPage() {
               price: "$15.95",
               variant: "Full Rack",
               imageSrc:
-                "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg",
+                "http://img.b2bpic.net/free-photo/from-shrimps-batter-with-red-rice-greens-white-plate_176474-2654.jpg?_wi=2",
               imageAlt: "Jerk chicken grilled on foil with spices",
             },
             {
@@ -117,7 +117,7 @@ export default function MenuPage() {
               price: "$16.95",
               variant: "Fresh Daily",
               imageSrc:
-                "http://img.b2bpic.net/free-photo/side-view-fried-eggs-with-shrimps-vegetables-pan-served-with-sauces_140725-11952.jpg",
+                "http://img.b2bpic.net/free-photo/side-view-fried-eggs-with-shrimps-vegetables-pan-served-with-sauces_140725-11952.jpg?_wi=2",
               imageAlt: "Curry shrimp over rice and peas",
             },
             {
@@ -126,7 +126,7 @@ export default function MenuPage() {
               price: "$12.95",
               variant: "6 Pieces",
               imageSrc:
-                "http://img.b2bpic.net/free-photo/chicken-nuggets-served-with-french-fries-sauces_140725-5759.jpg",
+                "http://img.b2bpic.net/free-photo/chicken-nuggets-served-with-french-fries-sauces_140725-5759.jpg?_wi=2",
               imageAlt: "Golden conch fritters with dipping sauce",
             },
             {
@@ -135,7 +135,7 @@ export default function MenuPage() {
               price: "$16.95",
               variant: "Premium Cut",
               imageSrc:
-                "http://img.b2bpic.net/free-photo/hot-spicy-grilled-pork-salad-with-berry-rice_1339-6325.jpg",
+                "http://img.b2bpic.net/free-photo/hot-spicy-grilled-pork-salad-with-berry-rice_1339-6325.jpg?_wi=2",
               imageAlt: "Jerk pork platter with rice and tropical slaw",
             },
             {
@@ -144,7 +144,7 @@ export default function MenuPage() {
               price: "$17.95",
               variant: "Traditional Recipe",
               imageSrc:
-                "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg",
+                "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=2",
               imageAlt: "Rich curry goat served over rice and peas",
             },
             {
@@ -153,7 +153,7 @@ export default function MenuPage() {
               price: "$8.95",
               variant: "Sides Bundle",
               imageSrc:
-                "http://img.b2bpic.net/free-photo/deep-fried-samosas-rustic-crockery-plate-generated-by-ai_188544-41080.jpg",
+                "http://img.b2bpic.net/free-photo/deep-fried-samosas-rustic-crockery-plate-generated-by-ai_188544-41080.jpg?_wi=2",
               imageAlt: "Festival dumplings with tropical slaw and mac and cheese",
             },
           ]}
@@ -190,7 +190,7 @@ export default function MenuPage() {
                 "Order online or call. Your meal is prepared fresh and ready for pickup or delivery.",
               media: {
                 imageSrc:
-                  "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg",
+                  "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=2",
               },
               items: [
                 {
@@ -211,7 +211,7 @@ export default function MenuPage() {
       {/* Footer */}
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg"
+          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=2"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
           copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"

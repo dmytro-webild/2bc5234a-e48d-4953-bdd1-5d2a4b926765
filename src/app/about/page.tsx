@@ -111,7 +111,7 @@ export default function AboutPage() {
               name: "Teria Bryant",
               role: "Founder & Head Chef",
               description: "Teria brings 15+ years of Caribbean culinary expertise and authentic island passion to every dish. Her vision transformed Caribbean Flair from a dream into a premium dining destination serving Lehigh Acres with pride.",
-              imageSrc: "http://img.b2bpic.net/free-photo/medium-shot-professional-chef-working_23-2151232185.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/medium-shot-professional-chef-working_23-2151232185.jpg?_wi=2",
               imageAlt: "Teria Bryant, founder of Caribbean Flair",
               socialLinks: [
                 {
@@ -125,7 +125,7 @@ export default function AboutPage() {
               name: "Deb Farrell",
               role: "Co-Owner & Operations Lead",
               description: "Deb ensures every customer experience is smooth, welcoming, and unforgettable. Together with Teria, she's building a thriving Black- and women-owned business that celebrates Caribbean culture and community impact.",
-              imageSrc: "http://img.b2bpic.net/free-photo/successful-business-woman-blue-suit_158595-5024.jpg",
+              imageSrc: "http://img.b2bpic.net/free-photo/successful-business-woman-blue-suit_158595-5024.jpg?_wi=2",
               imageAlt: "Deb Farrell, co-owner of Caribbean Flair",
               socialLinks: [
                 {
@@ -154,7 +154,7 @@ export default function AboutPage() {
               title: "Authentic Island Recipes",
               description: "Every dish honors traditional Caribbean cooking methods with modern quality standards. Fresh ingredients, time-tested techniques, and genuine island spirit in every bite.",
               media: {
-                imageSrc: "http://img.b2bpic.net/free-photo/friends-having-nice-barbeque-together_23-2149271905.jpg",
+                imageSrc: "http://img.b2bpic.net/free-photo/friends-having-nice-barbeque-together_23-2149271905.jpg?_wi=2",
                 imageAlt: "Chef grilling jerk meats with expertise",
               },
               items: [
@@ -175,7 +175,7 @@ export default function AboutPage() {
 
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg"
+          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=3"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
           copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
