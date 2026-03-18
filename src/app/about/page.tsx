@@ -146,7 +146,7 @@ export default function AboutPage() {
               text: "Order Now",              href: "/menu"},
           ]}
           buttonAnimation="slide-up"
-          imageSrc="http://img.b2bpic.net/free-vector/summer-label-collectio_23-2148160410.jpg?_wi=1"
+          imageSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E"
           imageAlt="Caribbean Flair About Us"
           mediaAnimation="opacity"
           imagePosition="right"
@@ -170,7 +170,7 @@ export default function AboutPage() {
             {
               id: "teria-bryant",              name: "Teria Bryant",              role: "Founder & Head Chef",              description:
                 "Teria brings 15+ years of Caribbean culinary expertise and authentic island passion to every dish. Her vision transformed Caribbean Flair from a dream into a premium dining destination serving Lehigh Acres with pride and excellence.",              imageSrc:
-                "http://img.b2bpic.net/free-photo/medium-shot-professional-chef-working_23-2151232185.jpg?_wi=1",              imageAlt: "Teria Bryant, founder of Caribbean Flair",              socialLinks: [
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Teria Bryant, founder of Caribbean Flair",              socialLinks: [
                 {
                   icon: Facebook,
                   url: "https://facebook.com/caribbeanflair"},
@@ -179,7 +179,7 @@ export default function AboutPage() {
             {
               id: "deb-farrell",              name: "Deb Farrell",              role: "Co-Owner & Operations Lead",              description:
                 "Deb ensures every customer experience is smooth, welcoming, and unforgettable. Together with Teria, she's building a thriving Black- and women-owned business that celebrates Caribbean culture and community impact.",              imageSrc:
-                "http://img.b2bpic.net/free-photo/successful-business-woman-blue-suit_158595-5024.jpg?_wi=1",              imageAlt: "Deb Farrell, co-owner of Caribbean Flair",              socialLinks: [
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Deb Farrell, co-owner of Caribbean Flair",              socialLinks: [
                 {
                   icon: Facebook,
                   url: "https://facebook.com/caribbeanflair"},
@@ -250,7 +250,7 @@ export default function AboutPage() {
               id: "mission",              title: "Our Mission",              description:
                 "Deliver authentic Caribbean excellence while uplifting our community through Black- and women-owned business pride.",              media: {
                 imageSrc:
-                  "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1"},
+                  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E"},
               items: [
                 {
                   icon: Heart,
@@ -268,7 +268,7 @@ export default function AboutPage() {
       {/* Footer */}
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=1"
+          imageSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
           copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
