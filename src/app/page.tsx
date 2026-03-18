@@ -326,7 +326,7 @@ export default function HomePage() {
               text: "View Full Menu",              href: "#signature-dishes"},
           ]}
           buttonAnimation="slide-up"
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-2gw0wih3.jpg?_wi=3"
+          imageSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E"
           imageAlt="Red Caribbean Flair Island Jerk Grill Trailer"
           mediaAnimation="opacity"
           imagePosition="right"
@@ -354,13 +354,13 @@ export default function HomePage() {
           products={[
             {
               id: "jerk-chicken",              name: "Jerk Chicken Platter",              price: "$15.95",              variant: "Full Rack",              imageSrc:
-                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-wha24yfi.jpg?_wi=2",              imageAlt: "Jerk chicken grilled on foil with spices"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Jerk chicken grilled on foil with spices"},
             {
               id: "curry-shrimp",              name: "Curry Shrimp Platter",              price: "$16.95",              variant: "Fresh Daily",              imageSrc:
-                "http://img.b2bpic.net/free-photo/side-view-fried-eggs-with-shrimps-vegetables-pan-served-with-sauces_140725-11952.jpg?_wi=1",              imageAlt: "Curry shrimp over rice and peas"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Curry shrimp over rice and peas"},
             {
               id: "conch-fritters",              name: "Conch Fritters Combo",              price: "$12.95",              variant: "6 Pieces",              imageSrc:
-                "http://img.b2bpic.net/free-photo/chicken-nuggets-served-with-french-fries-sauces_140725-5759.jpg?_wi=1",              imageAlt: "Golden conch fritters with dipping sauce"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Golden conch fritters with dipping sauce"},
           ]}
         />
       </div>
@@ -380,34 +380,34 @@ export default function HomePage() {
             {
               id: "jerk-pork",              category: "Main Dishes",              title: "Jerk Pork Did Not Disappoint",              excerpt:
                 "Perfectly seasoned and grilled, bursting with island spices and authentic Jamaican flavor.",              imageSrc:
-                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-qcfdeh7f.jpg?_wi=2",              imageAlt: "Jerk pork platter with rice and tropical slaw",              authorName: "Caribbean Flair Team",              authorAvatar:
-                "http://img.b2bpic.net/free-photo/handsome-business-man-wearing-suit-looking-camera-smiling-broadly-with-happy-face-standing-white-background_141793-54115.jpg",              date: "Fresh Daily"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Jerk pork platter with rice and tropical slaw",              authorName: "Caribbean Flair Team",              authorAvatar:
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EAuthor%3C/text%3E%3C/svg%3E",              date: "Fresh Daily"},
             {
               id: "curry-goat",              category: "Featured",              title: "Curry Goat - A Community Favorite",              excerpt:
                 "Tender, aromatic, and cooked to perfection. Every bite transports you straight to Jamaica.",              imageSrc:
-                "http://img.b2bpic.net/free-photo/rice-dish-with-sauce-near-spices_23-2147894777.jpg?_wi=1",              imageAlt: "Rich curry goat served over rice and peas",              authorName: "Caribbean Flair Team",              authorAvatar:
-                "http://img.b2bpic.net/free-vector/colorful-avatars_23-2147502919.jpg",              date: "Popular Choice"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Rich curry goat served over rice and peas",              authorName: "Caribbean Flair Team",              authorAvatar:
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EAuthor%3C/text%3E%3C/svg%3E",              date: "Popular Choice"},
             {
               id: "festival-sides",              category: "Sides",              title: "Festival Dumplings & Tropical Slaw",              excerpt:
                 "Crispy, golden festival dumplings paired with our signature tropical slaw for the perfect complement.",              imageSrc:
-                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-dk53z92a.jpg?_wi=2",              imageAlt:
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt:
                 "Festival dumplings with tropical slaw and mac and cheese",              authorName: "Caribbean Flair Team",              authorAvatar:
-                "http://img.b2bpic.net/free-photo/close-up-businessman-with-tie_1098-2867.jpg",              date: "Must Try"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EAuthor%3C/text%3E%3C/svg%3E",              date: "Must Try"},
             {
               id: "escovitch-fish",              category: "Seafood",              title: "Escovitch Fish - Island Tradition",              excerpt:
                 "Fresh fish prepared in authentic Jamaican style with pickled vegetables and bold island flavors.",              imageSrc:
-                "http://img.b2bpic.net/free-photo/grilled-chicken-served-with-aubergine-lemon-parsley_140725-1554.jpg?_wi=1",              imageAlt: "Escovitch fish with pickled vegetables and lime",              authorName: "Caribbean Flair Team",              authorAvatar:
-                "http://img.b2bpic.net/free-photo/young-male-holding-hands-pockets-white-shirt-jacket-looking-elegant-front-view_176474-99655.jpg",              date: "Customer Favorite"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Escovitch fish with pickled vegetables and lime",              authorName: "Caribbean Flair Team",              authorAvatar:
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EAuthor%3C/text%3E%3C/svg%3E",              date: "Customer Favorite"},
             {
               id: "mac-cheese",              category: "Sides",              title: "Creamy Island Mac & Cheese",              excerpt:
                 "Smooth, rich, and soul-warming comfort food that pairs perfectly with any of our signature mains.",              imageSrc:
-                "http://img.b2bpic.net/free-photo/delicious-food-presentation_23-2151914003.jpg?_wi=1",              imageAlt: "Creamy mac and cheese side dish",              authorName: "Caribbean Flair Team",              authorAvatar:
-                "http://img.b2bpic.net/free-photo/pleased-young-brunette-caucasian-girl-looks-camera_141793-103873.jpg",              date: "Comfort Classic"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Creamy mac and cheese side dish",              authorName: "Caribbean Flair Team",              authorAvatar:
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EAuthor%3C/text%3E%3C/svg%3E",              date: "Comfort Classic"},
             {
               id: "grill-action",              category: "Behind the Scenes",              title: "Fresh Off The Grill - Live Action",              excerpt:
                 "Watch our expert grill masters prepare your meal with passion, precision, and authentic Caribbean technique.",              imageSrc:
-                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-y2tu4f81.jpg?_wi=2",              imageAlt: "Chef grilling jerk meats on foil with smoke",              authorName: "Caribbean Flair Team",              authorAvatar:
-                "http://img.b2bpic.net/free-photo/handsome-business-man-wearing-suit-looking-camera-smiling-broadly-with-happy-face-standing-white-background_141793-54115.jpg",              date: "Daily Special"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Chef grilling jerk meats on foil with smoke",              authorName: "Caribbean Flair Team",              authorAvatar:
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EAuthor%3C/text%3E%3C/svg%3E",              date: "Daily Special"},
           ]}
         />
       </div>
@@ -429,32 +429,32 @@ export default function HomePage() {
               id: "review-1",              name: "Sarah Johnson",              handle: "@sarahjohn2024",              testimonial:
                 "Every dish packed with authentic island flavor! Teria and Deb truly know how to deliver Caribbean excellence.",              rating: 5,
               imageSrc:
-                "http://img.b2bpic.net/free-photo/young-woman-eating-delicious-tiramisu-cafe_1303-25270.jpg?_wi=1",              imageAlt: "Sarah Johnson smiling"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EAuthor%3C/text%3E%3C/svg%3E",              imageAlt: "Sarah Johnson smiling"},
             {
               id: "review-2",              name: "Michael Chen",              handle: "@mikeflavorseek",              testimonial:
                 "Jerk pork did not disappoint! Best food truck in Lehigh Acres. Fresh, authentic, and made with real passion.",              rating: 5,
               imageSrc:
-                "http://img.b2bpic.net/free-photo/couple-enjoying-spending-good-time-together-while-having-date-restaurant_58466-16035.jpg?_wi=1",              imageAlt: "Michael Chen enjoying Caribbean Flair"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EAuthor%3C/text%3E%3C/svg%3E",              imageAlt: "Michael Chen enjoying Caribbean Flair"},
             {
               id: "review-3",              name: "Amanda Davis",              handle: "@amandataste",              testimonial:
                 "The curry shrimp is absolutely incredible! You can taste the love in every bite. Supporting Black-owned, women-owned businesses never tasted so good.",              rating: 5,
               imageSrc:
-                "http://img.b2bpic.net/free-photo/sideways-shot-attractive-curly-woman-has-happy-expression-enjoys-electronic-song-modern-headphones-has-recreation-time-reads-text-message-cell-phone_273609-3485.jpg?_wi=1",              imageAlt: "Amanda Davis with Caribbean Flair meal"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EAuthor%3C/text%3E%3C/svg%3E",              imageAlt: "Amanda Davis with Caribbean Flair meal"},
             {
               id: "review-4",              name: "David Martinez",              handle: "@davidsflavorquests",              testimonial:
                 "Finally, real Caribbean food in Lehigh Acres! The menu, the quality, the service—everything is top-tier. This is my new favorite spot.",              rating: 5,
               imageSrc:
-                "http://img.b2bpic.net/free-photo/crazy-dealer-happy-expression_1194-4005.jpg?_wi=1",              imageAlt: "David Martinez at Caribbean Flair"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EAuthor%3C/text%3E%3C/svg%3E",              imageAlt: "David Martinez at Caribbean Flair"},
             {
               id: "review-5",              name: "Jessica Williams",              handle: "@jessicaeats_local",              testimonial:
                 "Conch fritters are crispy heaven! The whole experience feels premium yet so authentic. Teria and Deb are changing the food game.",              rating: 5,
               imageSrc:
-                "http://img.b2bpic.net/free-photo/friends-eating-barbecue_23-2148733607.jpg?_wi=1",              imageAlt: "Jessica Williams enjoying meal"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EAuthor%3C/text%3E%3C/svg%3E",              imageAlt: "Jessica Williams enjoying meal"},
             {
               id: "review-6",              name: "Robert Thompson",              handle: "@robfeeds",              testimonial:
                 "Island fusion done right. The quality of ingredients and cooking technique is professional-level. Worth every penny and the drive. Highly recommend!",              rating: 5,
               imageSrc:
-                "http://img.b2bpic.net/free-photo/woman-with-thumbs-up_1149-1163.jpg?_wi=1",              imageAlt: "Robert Thompson thumbs up"},
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EAuthor%3C/text%3E%3C/svg%3E",              imageAlt: "Robert Thompson thumbs up"},
           ]}
         />
       </div>
@@ -475,7 +475,7 @@ export default function HomePage() {
             {
               id: "teria-bryant",              name: "Teria Bryant",              role: "Founder & Head Chef",              description:
                 "Teria brings 15+ years of Caribbean culinary expertise and authentic island passion to every dish. Her vision transformed Caribbean Flair from a dream into a premium dining destination serving Lehigh Acres with pride.",              imageSrc:
-                "http://img.b2bpic.net/free-photo/medium-shot-professional-chef-working_23-2151232185.jpg?_wi=1",              imageAlt: "Teria Bryant, founder of Caribbean Flair",              socialLinks: [
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Teria Bryant, founder of Caribbean Flair",              socialLinks: [
                 {
                   icon: Facebook,
                   url: "https://facebook.com/caribbeanflair"},
@@ -484,7 +484,7 @@ export default function HomePage() {
             {
               id: "deb-farrell",              name: "Deb Farrell",              role: "Co-Owner & Operations Lead",              description:
                 "Deb ensures every customer experience is smooth, welcoming, and unforgettable. Together with Teria, she's building a thriving Black- and women-owned business that celebrates Caribbean culture and community impact.",              imageSrc:
-                "http://img.b2bpic.net/free-photo/successful-business-woman-blue-suit_158595-5024.jpg?_wi=1",              imageAlt: "Deb Farrell, co-owner of Caribbean Flair",              socialLinks: [
+                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Deb Farrell, co-owner of Caribbean Flair",              socialLinks: [
                 {
                   icon: Facebook,
                   url: "https://facebook.com/caribbeanflair"},
@@ -517,7 +517,7 @@ export default function HomePage() {
               id: "fast-delivery",              title: "Fast & Fresh",              description:
                 "Grilled fresh to order. Your meal arrives hot, delicious, and packed with island flavor.",              media: {
                 imageSrc:
-                  "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=1"},
+                  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E"},
               items: [
                 {
                   icon: Zap,
@@ -535,7 +535,7 @@ export default function HomePage() {
       {/* Footer with Local Map Info and Social Links */}
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=1"
+          imageSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
           copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
