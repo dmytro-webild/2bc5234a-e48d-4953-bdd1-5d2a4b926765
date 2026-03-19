@@ -356,15 +356,15 @@ export default function HomePage() {
           products={[
             {
               id: "jerk-chicken",              name: "Jerk Chicken Platter",              price: "$15.95",              variant: "Full Rack",              imageSrc:
-                "data:image/svg+xml,%3Csvg xmlns=?_wi=7'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Jerk chicken grilled on foil with spices"
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Jerk_chicken.jpg/1024px-Jerk_chicken.jpg",              imageAlt: "Jerk chicken grilled on foil with spices"
             },
             {
               id: "curry-shrimp",              name: "Curry Shrimp Platter",              price: "$16.95",              variant: "Fresh Daily",              imageSrc:
-                "data:image/svg+xml,%3Csvg xmlns=?_wi=8'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Curry shrimp over rice and peas"
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Curry_shrimp.jpg/1024px-Curry_shrimp.jpg",              imageAlt: "Curry shrimp over rice and peas"
             },
             {
               id: "conch-fritters",              name: "Conch Fritters Combo",              price: "$12.95",              variant: "6 Pieces",              imageSrc:
-                "data:image/svg+xml,%3Csvg xmlns=?_wi=9'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Golden conch fritters with dipping sauce"
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Conch_fritters.jpg/1024px-Conch_fritters.jpg",              imageAlt: "Golden conch fritters with dipping sauce"
             },
           ]}
         />
@@ -551,7 +551,7 @@ export default function HomePage() {
           imageSrc="data:image/svg+xml,%3Csvg xmlns=?_wi=18'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
-          copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
+          copyrightText="© 2026 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
           columns={footerColumns}
         />
       </div>
