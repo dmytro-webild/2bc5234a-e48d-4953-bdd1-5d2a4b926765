@@ -54,6 +54,7 @@ export default function HomePage() {
     { name: "About Us", id: "owners-spotlight" },
     { name: "Gallery", id: "featured-gallery" },
     { name: "Reviews", id: "testimonials" },
+    { name: "Order Now", id: "/order-now" },
     { name: "Locations", id: "footer" },
   ];
 
@@ -68,7 +69,7 @@ export default function HomePage() {
     },
     {
       title: "Order & Contact",      items: [
-        { label: "Order Online", href: "#signature-dishes" },
+        { label: "Order Online", href: "/order-now" },
         { label: "Call Us", href: "tel:2397850423" },
         { label: "Locations & Hours", href: "#footer" },
         { label: "Contact", href: "#footer" },
@@ -231,7 +232,7 @@ export default function HomePage() {
           brandName="Caribbean Flair"
           navItems={navItems}
           button={{
-            text: "See Full Menu",            href: "/menu"
+            text: "Order Now",            href: "/order-now"
           }}
         />
       </div>
@@ -248,15 +249,15 @@ export default function HomePage() {
               {navItems.map((item) => (
                 <a
                   key={item.id}
-                  href={`#${item.id}`}
+                  href={typeof item.id === 'string' && item.id.startsWith('/') ? item.id : `#${item.id}`}
                   className="block text-gray-800 hover:text-primary-cta font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <a href="/menu" className="w-full bg-primary-cta text-white py-2 rounded-lg font-semibold hover:opacity-90 text-center block">
-                See Full Menu
+              <a href="/order-now" className="w-full bg-primary-cta text-white py-2 rounded-lg font-semibold hover:opacity-90 text-center block">
+                Order Now
               </a>
             </div>
           </div>
@@ -274,9 +275,9 @@ export default function HomePage() {
             <Phone className="w-6 h-6 text-primary-cta group-hover:scale-110 transition-transform" />
           </a>
           <a
-            href="/menu"
+            href="/order-now"
             className="bg-gradient-to-r from-primary-cta to-accent text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all flex items-center justify-center group font-semibold"
-            title="See Full Menu"
+            title="Order Now"
           >
             <ShoppingCart className="w-6 h-6 group-hover:scale-110 transition-transform" />
           </a>
@@ -320,10 +321,10 @@ export default function HomePage() {
           background={{ variant: "glowing-orb" }}
           buttons={[
             {
-              text: "Order Online Now",              href: "/menu"
+              text: "Order Online Now",              href: "/order-now"
             },
             {
-              text: "View Full Menu",              href: "/menu"
+              text: "View Full Menu",              href: "#signature-dishes"
             },
           ]}
           buttonAnimation="slide-up"
@@ -345,7 +346,7 @@ export default function HomePage() {
           tagAnimation="slide-up"
           buttons={[
             {
-              text: "Explore Full Menu",              href: "/menu"
+              text: "Order Now",              href: "/order-now"
             },
           ]}
           buttonAnimation="slide-up"
@@ -512,7 +513,7 @@ export default function HomePage() {
           tagAnimation="slide-up"
           buttons={[
             {
-              text: "Order Online Now",              href: "/menu"
+              text: "Order Online Now",              href: "/order-now"
             },
             {
               text: "Call (239) 785-0423",              href: "tel:2397850423"
