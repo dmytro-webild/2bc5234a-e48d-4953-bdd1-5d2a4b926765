@@ -102,7 +102,7 @@ export default function AboutPage() {
       ),
       media: (
         <div className="bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg h-full flex items-center justify-center text-white text-3xl font-bold">
-          2025
+          2026
         </div>
       ),
       reverse: false,
@@ -271,7 +271,7 @@ export default function AboutPage() {
           imageSrc="data:image/svg+xml,%3Csvg xmlns?_wi=25'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
-          copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
+          copyrightText="© 2026 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
           columns={footerColumns}
         />
       </div>
