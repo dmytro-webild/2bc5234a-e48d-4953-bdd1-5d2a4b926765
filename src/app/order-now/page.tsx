@@ -164,7 +164,7 @@ export default function OrderNowPage() {
             },
           ]}
           buttonAnimation="slide-up"
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-094w00ok.jpg"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-094w00ok.jpg?_wi=2"
           imageAlt="Caribbean Flair delivery service"
           mediaAnimation="opacity"
           imagePosition="right"
@@ -189,25 +189,25 @@ export default function OrderNowPage() {
               id: "doordash",              title: "DoorDash",              descriptions: [
                 "Fast delivery with real-time tracking",                "Easy app-based ordering",                "Contactless delivery available"
               ],
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-8nakpzaa.jpg",              imageAlt: "DoorDash delivery service logo"
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-8nakpzaa.jpg?_wi=2",              imageAlt: "DoorDash delivery service logo"
             },
             {
               id: "ubereats",              title: "Uber Eats",              descriptions: [
                 "Seamless ordering experience",                "Fast and reliable delivery",                "Track your order in real-time"
               ],
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-i3ll7ifz.jpg",              imageAlt: "Uber Eats delivery service logo"
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-i3ll7ifz.jpg?_wi=2",              imageAlt: "Uber Eats delivery service logo"
             },
             {
               id: "grubhub",              title: "Grubhub",              descriptions: [
                 "Wide reach and convenient ordering",                "Loyalty rewards program",                "Quick and professional delivery"
               ],
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-60e6tsue.jpg",              imageAlt: "Grubhub delivery service logo"
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-60e6tsue.jpg?_wi=2",              imageAlt: "Grubhub delivery service logo"
             },
             {
               id: "instacart",              title: "Instacart",              descriptions: [
                 "Fresh food delivery expertise",                "Same-day delivery available",                "Easy scheduling options"
               ],
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-gby1l988.jpg",              imageAlt: "Instacart delivery service logo"
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-gby1l988.jpg?_wi=2",              imageAlt: "Instacart delivery service logo"
             },
           ]}
         />
@@ -216,7 +216,7 @@ export default function OrderNowPage() {
       {/* Footer with Local Map Info and Social Links */}
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-094w00ok.jpg"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-094w00ok.jpg?_wi=3"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
           copyrightText="© 2026 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
