@@ -71,7 +71,7 @@ export default function HomePage() {
         { label: "Order Online", href: "/order-now" },
         { label: "Call Us", href: "tel:2397850423" },
         { label: "Locations & Hours", href: "#footer" },
-        { label: "Contact", href: "#footer" },
+        { label: "Contact", href: "/contact" },
       ],
     },
     {
