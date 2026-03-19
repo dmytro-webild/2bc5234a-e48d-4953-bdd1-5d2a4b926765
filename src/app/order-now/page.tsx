@@ -65,7 +65,11 @@ export default function OrderNowPage() {
   ];
 
   const deliveryServices = [
-    "Uber Eats",    "DoorDash",    "Grubhub",    "Other Services"];
+    { name: "Uber Eats", href: "https://www.ubereats.com" },
+    { name: "DoorDash", href: "https://www.doordash.com" },
+    { name: "Grubhub", href: "https://www.grubhub.com" },
+    { name: "Seamless", href: "https://www.seamless.com" },
+  ];
 
   return (
     <ThemeProvider
@@ -177,29 +181,31 @@ export default function OrderNowPage() {
 
       {/* Delivery Options Section */}
       <div id="delivery-options" data-section="delivery-options">
-        <SocialProofOne
-          logos={[
-            "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773929131328-elg8yd2v.png",            "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773929131329-fajlvnzq.png",            "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773929131329-6odz7kv6.png",            "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773929131329-m4fwr7dr.png"]}
-          names={deliveryServices}
-          title="Choose Your Delivery Service"
-          description="Select your preferred delivery partner to bring Caribbean Flair straight to your table. Fast, reliable service with real-time tracking."
-          tag="Multiple Options"
-          tagIcon={Truck}
-          tagAnimation="slide-up"
-          textboxLayout="default"
-          useInvertedBackground={false}
-          speed={40}
-          showCard={true}
-          buttons={[
-            {
-              text: "View Menu",              href: "/#signature-dishes"
-            },
-            {
-              text: "Call Us",              href: "tel:2397850423"
-            },
-          ]}
-          buttonAnimation="slide-up"
-        />
+        <div className="px-4 py-12 md:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Delivery Service</h2>
+              <p className="text-lg text-gray-600">Select your preferred delivery partner to bring Caribbean Flair straight to your table. Fast, reliable service with real-time tracking.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {deliveryServices.map((service) => (
+                <a
+                  key={service.name}
+                  href={service.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative overflow-hidden rounded-lg p-6 bg-white border-2 border-gray-200 hover:border-orange-500 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-h-32 text-center"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/5 group-hover:to-orange-500/10 transition-all duration-300" />
+                  <div className="relative z-10">
+                    <p className="font-bold text-lg mb-1 group-hover:text-orange-600 transition-colors">{service.name}</p>
+                    <p className="text-sm text-gray-500 group-hover:text-gray-700">Order online →</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Footer with Local Map Info and Social Links */}
