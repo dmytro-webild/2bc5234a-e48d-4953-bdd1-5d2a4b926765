@@ -171,7 +171,7 @@ export default function OrderNowPage() {
             },
           ]}
           buttonAnimation="slide-up"
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773930101919-jnf5am09.png"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773930101919-jnf5am09.png?_wi=1"
           imageAlt="Caribbean Flair delivery service"
           mediaAnimation="opacity"
           imagePosition="right"
@@ -211,7 +211,7 @@ export default function OrderNowPage() {
       {/* Footer with Local Map Info and Social Links */}
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773930101920-zrd23q6i.jpg"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773930101920-zrd23q6i.jpg?_wi=1"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
           copyrightText="© 2026 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
