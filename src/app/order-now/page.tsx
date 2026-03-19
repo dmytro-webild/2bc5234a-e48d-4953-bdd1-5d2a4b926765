@@ -45,7 +45,6 @@ export default function OrderNowPage() {
     { name: "About Us", id: "owners-spotlight" },
     { name: "Gallery", id: "featured-gallery" },
     { name: "Reviews", id: "testimonials" },
-    { name: "Order Now", id: "order-now" },
     { name: "Locations", id: "footer" },
   ];
 
@@ -60,10 +59,10 @@ export default function OrderNowPage() {
     },
     {
       title: "Order & Contact",      items: [
-        { label: "Uber Eats", href: "https://www.ubereats.com" },
-        { label: "DoorDash", href: "https://www.doordash.com" },
+        { label: "Uber Eats", href: "https://www.ubereats.com/search?q=caribbean%20flair&location=Lehigh%20Acres%2C%20FL" },
+        { label: "DoorDash", href: "https://www.doordash.com/search?q=caribbean%20flair&location=Lehigh%20Acres%2C%20FL" },
+        { label: "Grubhub", href: "https://www.grubhub.com/search?q=caribbean%20flair&location=Lehigh%20Acres%2C%20FL" },
         { label: "Call Us", href: "tel:2397850423" },
-        { label: "Locations & Hours", href: "/#footer" },
       ],
     },
     {
@@ -320,7 +319,7 @@ export default function OrderNowPage() {
           features={[
             {
               id: "uber-eats",              title: "Uber Eats",              description: "Order on Uber Eats for fast, convenient delivery. Browse our full menu and track your order in real-time.",              media: {
-                imageSrc: "data:image/svg+xml,%3Csvg xmlns=?_wi=1'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23000000' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='20' font-weight='bold' text-anchor='middle' dominant-baseline='middle' fill='%23FFFFFF'%3EUber Eats%3C/text%3E%3C/svg%3E"
+                imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23000000' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='20' font-weight='bold' text-anchor='middle' dominant-baseline='middle' fill='%23FFFFFF'%3EUber Eats%3C/text%3E%3C/svg%3E"
               },
               items: [
                 {
@@ -336,7 +335,7 @@ export default function OrderNowPage() {
             },
             {
               id: "doordash",              title: "DoorDash",              description: "Order via DoorDash for reliable delivery service. Enjoy exclusive deals and quick service to your location.",              media: {
-                imageSrc: "data:image/svg+xml,%3Csvg xmlns=?_wi=2'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23FF3008' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='20' font-weight='bold' text-anchor='middle' dominant-baseline='middle' fill='%23FFFFFF'%3EDoorDash%3C/text%3E%3C/svg%3E"
+                imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23FF3008' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='20' font-weight='bold' text-anchor='middle' dominant-baseline='middle' fill='%23FFFFFF'%3EDoorDash%3C/text%3E%3C/svg%3E"
               },
               items: [
                 {
@@ -352,7 +351,7 @@ export default function OrderNowPage() {
             },
             {
               id: "grubhub",              title: "Grubhub",              description: "Order through Grubhub for convenient food delivery. Discover our menu and enjoy delicious Caribbean cuisine at home.",              media: {
-                imageSrc: "data:image/svg+xml,%3Csvg xmlns=?_wi=3'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23FF8000' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='20' font-weight='bold' text-anchor='middle' dominant-baseline='middle' fill='%23FFFFFF'%3EGrubhub%3C/text%3E%3C/svg%3E"
+                imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23FF8000' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='20' font-weight='bold' text-anchor='middle' dominant-baseline='middle' fill='%23FFFFFF'%3EGrubhub%3C/text%3E%3C/svg%3E"
               },
               items: [
                 {
@@ -366,27 +365,11 @@ export default function OrderNowPage() {
               ],
               reverse: false,
             },
-            {
-              id: "postmates",              title: "Postmates",              description: "Get your Caribbean Flair meal delivered through Postmates. Quick pickup and delivery to satisfy your island cravings.",              media: {
-                imageSrc: "data:image/svg+xml,%3Csvg xmlns=?_wi=4'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23000000' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='20' font-weight='bold' text-anchor='middle' dominant-baseline='middle' fill='%23FFFFFF'%3EPostmates%3C/text%3E%3C/svg%3E"
-              },
-              items: [
-                {
-                  icon: ExternalLink,
-                  text: "Quick pickup & delivery"
-                },
-                {
-                  icon: TrendingUp,
-                  text: "Fresh food guaranteed"
-                },
-              ],
-              reverse: true,
-            },
           ]}
         />
       </div>
 
-      {/* Final CTA Section */}
+      {/* Direct Ordering CTA Section */}
       <div id="final-cta" data-section="final-cta">
         <FeatureCardTen
           title="Can't Wait? Call Us Directly"
@@ -409,7 +392,7 @@ export default function OrderNowPage() {
           features={[
             {
               id: "direct-call",              title: "Phone Orders",              description: "Skip the apps and call us directly for personalized service and custom orders.",              media: {
-                imageSrc: "data:image/svg+xml,%3Csvg xmlns=?_wi=5'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ECall Us Today%3C/text%3E%3C/svg%3E"
+                imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ECall Us Today%3C/text%3E%3C/svg%3E"
               },
               items: [
                 {
@@ -430,7 +413,7 @@ export default function OrderNowPage() {
       {/* Footer */}
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="data:image/svg+xml,%3Csvg xmlns=?_wi=6'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EFooter Image%3C/text%3E%3C/svg%3E"
+          imageSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EFooter Image%3C/text%3E%3C/svg%3E"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
           copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
