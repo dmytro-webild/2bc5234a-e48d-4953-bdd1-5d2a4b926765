@@ -19,8 +19,7 @@ export default function ContactPage() {
 
   const footerColumns = [
     {
-      title: "Quick Links",
-      items: [
+      title: "Quick Links",      items: [
         { label: "Home", href: "/" },
         { label: "Menu", href: "/menu" },
         { label: "Gallery", href: "/gallery" },
@@ -28,8 +27,7 @@ export default function ContactPage() {
       ],
     },
     {
-      title: "Order & Contact",
-      items: [
+      title: "Order & Contact",      items: [
         { label: "Order Online", href: "/order" },
         { label: "Call Us", href: "tel:2397850423" },
         { label: "Locations & Hours", href: "/locations" },
@@ -37,8 +35,7 @@ export default function ContactPage() {
       ],
     },
     {
-      title: "Connect With Us",
-      items: [
+      title: "Connect With Us",      items: [
         { label: "Facebook", href: "https://facebook.com/caribbeanflair" },
         { label: "About Us", href: "/about" },
         { label: "Privacy Policy", href: "#privacy" },
@@ -46,8 +43,7 @@ export default function ContactPage() {
       ],
     },
     {
-      title: "Located In",
-      items: [
+      title: "Located In",      items: [
         { label: "801 Leeland Heights Blvd W", href: "#map" },
         { label: "Lehigh Acres, FL 33936", href: "#map" },
         { label: "Open Until 9PM", href: "/locations" },
@@ -74,9 +70,7 @@ export default function ContactPage() {
           brandName="Caribbean Flair"
           navItems={navItems}
           button={{
-            text: "Order Now",
-            href: "/order",
-          }}
+            text: "Order Now",            href: "/order"}}
         />
       </div>
 
@@ -89,13 +83,9 @@ export default function ContactPage() {
           tagAnimation="slide-up"
           buttons={[
             {
-              text: "Call (239) 785-0423",
-              href: "tel:2397850423",
-            },
+              text: "Call (239) 785-0423",              href: "tel:2397850423"},
             {
-              text: "Visit Us Today",
-              href: "/order",
-            },
+              text: "Visit Us Today",              href: "/order"},
           ]}
           buttonAnimation="slide-up"
           textboxLayout="default"
@@ -103,21 +93,15 @@ export default function ContactPage() {
           useInvertedBackground={false}
           features={[
             {
-              id: "phone-contact",
-              title: "Call Us Directly",
-              description: "Speak with our team for custom orders, catering, or any questions about our authentic Caribbean menu.",
-              media: {
-                imageSrc: "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=4",
-              },
+              id: "phone-contact",              title: "Call Us Directly",              description: "Speak with our team for custom orders, catering, or any questions about our authentic Caribbean menu.",              media: {
+                imageSrc: "http://img.b2bpic.net/free-photo/side-view-smiley-man-getting-coffee_23-2149663609.jpg?_wi=4"},
               items: [
                 {
                   icon: Zap,
-                  text: "(239) 785-0423",
-                },
+                  text: "(239) 785-0423"},
                 {
                   icon: Heart,
-                  text: "Available until 9PM",
-                },
+                  text: "Available until 9PM"},
               ],
               reverse: false,
             },
@@ -134,13 +118,9 @@ export default function ContactPage() {
           tagAnimation="slide-up"
           buttons={[
             {
-              text: "Order Online Now",
-              href: "/order",
-            },
+              text: "Order Online Now",              href: "/order"},
             {
-              text: "View Full Menu",
-              href: "/menu",
-            },
+              text: "View Full Menu",              href: "/menu"},
           ]}
           buttonAnimation="slide-up"
           textboxLayout="default"
@@ -148,21 +128,15 @@ export default function ContactPage() {
           useInvertedBackground={true}
           features={[
             {
-              id: "location-details",
-              title: "Lehigh Acres, Florida",
-              description: "Experience premium Caribbean fusion at our convenient Lehigh Acres location. Fresh-grilled authentic island cuisine made with love and expertise.",
-              media: {
-                imageSrc: "http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=8",
-              },
+              id: "location-details",              title: "Lehigh Acres, Florida",              description: "Experience premium Caribbean fusion at our convenient Lehigh Acres location. Fresh-grilled authentic island cuisine made with love and expertise.",              media: {
+                imageSrc: "http://img.b2bpic.net/free-photo/chef-cooking-kitchen-while-wearing-professional-attire_23-2151208291.jpg?_wi=8"},
               items: [
                 {
                   icon: Zap,
-                  text: "801 Leeland Heights Blvd W",
-                },
+                  text: "801 Leeland Heights Blvd W"},
                 {
                   icon: Heart,
-                  text: "Daily Service Until 9PM",
-                },
+                  text: "Daily Service Until 9PM"},
               ],
               reverse: true,
             },
