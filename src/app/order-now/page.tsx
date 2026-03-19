@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleCentered from "@/components/navbar/NavbarStyleCentered/NavbarStyleCentered";
 import HeroSplit from "@/components/sections/hero/HeroSplit";
-import FeatureCardTwentySeven from "@/components/sections/feature/FeatureCardTwentySeven";
+import SocialProofOne from "@/components/sections/socialProof/SocialProofOne";
 import FooterMedia from "@/components/sections/footer/FooterMedia";
 import {
   Award,
@@ -63,6 +63,9 @@ export default function OrderNowPage() {
       ],
     },
   ];
+
+  const deliveryServices = [
+    "Uber Eats",    "DoorDash",    "Grubhub",    "Other Services"];
 
   return (
     <ThemeProvider
@@ -164,7 +167,7 @@ export default function OrderNowPage() {
             },
           ]}
           buttonAnimation="slide-up"
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-094w00ok.jpg?_wi=2"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773929131328-mphgod14.jpg"
           imageAlt="Caribbean Flair delivery service"
           mediaAnimation="opacity"
           imagePosition="right"
@@ -174,49 +177,35 @@ export default function OrderNowPage() {
 
       {/* Delivery Options Section */}
       <div id="delivery-options" data-section="delivery-options">
-        <FeatureCardTwentySeven
+        <SocialProofOne
+          logos={[
+            "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773929131328-elg8yd2v.png",            "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773929131329-fajlvnzq.png",            "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773929131329-6odz7kv6.png",            "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773929131329-m4fwr7dr.png"]}
+          names={deliveryServices}
           title="Choose Your Delivery Service"
-          description="Select your preferred delivery partner to bring Caribbean Flair straight to your table."
+          description="Select your preferred delivery partner to bring Caribbean Flair straight to your table. Fast, reliable service with real-time tracking."
           tag="Multiple Options"
           tagIcon={Truck}
           tagAnimation="slide-up"
           textboxLayout="default"
-          gridVariant="three-columns-all-equal-width"
-          animationType="slide-up"
           useInvertedBackground={false}
-          features={[
+          speed={40}
+          showCard={true}
+          buttons={[
             {
-              id: "doordash",              title: "DoorDash",              descriptions: [
-                "Fast delivery with real-time tracking",                "Easy app-based ordering",                "Contactless delivery available"
-              ],
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-8nakpzaa.jpg?_wi=2",              imageAlt: "DoorDash delivery service logo"
+              text: "View Menu",              href: "/#signature-dishes"
             },
             {
-              id: "ubereats",              title: "Uber Eats",              descriptions: [
-                "Seamless ordering experience",                "Fast and reliable delivery",                "Track your order in real-time"
-              ],
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-i3ll7ifz.jpg?_wi=2",              imageAlt: "Uber Eats delivery service logo"
-            },
-            {
-              id: "grubhub",              title: "Grubhub",              descriptions: [
-                "Wide reach and convenient ordering",                "Loyalty rewards program",                "Quick and professional delivery"
-              ],
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-60e6tsue.jpg?_wi=2",              imageAlt: "Grubhub delivery service logo"
-            },
-            {
-              id: "instacart",              title: "Instacart",              descriptions: [
-                "Fresh food delivery expertise",                "Same-day delivery available",                "Easy scheduling options"
-              ],
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-gby1l988.jpg?_wi=2",              imageAlt: "Instacart delivery service logo"
+              text: "Call Us",              href: "tel:2397850423"
             },
           ]}
+          buttonAnimation="slide-up"
         />
       </div>
 
       {/* Footer with Local Map Info and Social Links */}
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-094w00ok.jpg?_wi=3"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773929131328-mphgod14.jpg"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
           copyrightText="© 2026 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
