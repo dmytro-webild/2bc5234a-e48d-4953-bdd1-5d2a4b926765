@@ -469,7 +469,7 @@ export default function HomePage() {
       <div id="owners-spotlight" data-section="owners-spotlight">
         <TeamCardTwo
           title="Meet the Owners"
-          description="Teris Bryan and Deb Farrell: Passionate entrepreneurs bringing authentic Caribbean soul to Lehigh Acres."
+          description="Teria Bryant and Deb Farrell: Passionate entrepreneurs bringing authentic Caribbean soul to Lehigh Acres."
           tag="Community Leaders"
           tagIcon={Heart}
           tagAnimation="slide-up"
