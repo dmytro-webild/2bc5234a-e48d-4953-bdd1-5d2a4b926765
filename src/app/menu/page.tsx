@@ -3,21 +3,10 @@
 import Link from "next/link";
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleCentered from "@/components/navbar/NavbarStyleCentered/NavbarStyleCentered";
-import ProductCardFour from "@/components/sections/product/ProductCardFour";
+import HeroSplit from "@/components/sections/hero/HeroSplit";
+import BlogCardThree from "@/components/sections/blog/BlogCardThree";
 import FooterMedia from "@/components/sections/footer/FooterMedia";
-import {
-  Award,
-  Flame,
-  Phone,
-  ShoppingCart,
-  MapPin,
-  Clock,
-  Star,
-  Heart,
-  Zap,
-  TrendingUp,
-  Facebook,
-} from "lucide-react";
+import { Award, Camera, Phone, ShoppingCart } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function MenuPage() {
@@ -43,7 +32,7 @@ export default function MenuPage() {
 
   const navItems = [
     { name: "Home", id: "home" },
-    { name: "Menu", id: "signature-dishes" },
+    { name: "Menu", id: "featured-gallery" },
     { name: "About Us", id: "owners-spotlight" },
     { name: "Gallery", id: "featured-gallery" },
     { name: "Reviews", id: "testimonials" },
@@ -55,16 +44,16 @@ export default function MenuPage() {
       title: "Quick Links",      items: [
         { label: "Home", href: "/" },
         { label: "Menu", href: "/menu" },
-        { label: "Gallery", href: "/#featured-gallery" },
-        { label: "Reviews", href: "/#testimonials" },
+        { label: "Gallery", href: "#featured-gallery" },
+        { label: "Reviews", href: "#testimonials" },
       ],
     },
     {
       title: "Order & Contact",      items: [
-        { label: "Order Online", href: "/menu" },
+        { label: "Order Online", href: "/order-now" },
         { label: "Call Us", href: "tel:2397850423" },
-        { label: "Locations & Hours", href: "/#footer" },
-        { label: "Contact", href: "/#footer" },
+        { label: "Locations & Hours", href: "#footer" },
+        { label: "Contact", href: "#footer" },
       ],
     },
     {
@@ -154,28 +143,16 @@ export default function MenuPage() {
           opacity: 0;
         }
 
-        #menu-header {
+        #hero [data-section] {
           animation-delay: 0.1s;
         }
 
-        #full-menu {
+        #featured-gallery {
           animation-delay: 0.2s;
         }
 
-        #mains {
-          animation-delay: 0.3s;
-        }
-
-        #sides {
-          animation-delay: 0.4s;
-        }
-
-        #beverages {
-          animation-delay: 0.5s;
-        }
-
         #footer {
-          animation-delay: 0.6s;
+          animation-delay: 0.3s;
         }
 
         img {
@@ -183,16 +160,12 @@ export default function MenuPage() {
           opacity: 0;
         }
 
-        #full-menu img {
+        #hero img {
           animation-delay: 0.3s;
         }
 
-        #mains img {
+        #featured-gallery img {
           animation-delay: 0.4s;
-        }
-
-        #sides img {
-          animation-delay: 0.5s;
         }
 
         button, [role="button"], a[href*="#"], a[href*="/"] {
@@ -220,7 +193,7 @@ export default function MenuPage() {
           brandName="Caribbean Flair"
           navItems={navItems}
           button={{
-            text: "Order Now",            href: "/menu"
+            text: "Order Now",            href: "/order-now"
           }}
         />
       </div>
@@ -237,14 +210,14 @@ export default function MenuPage() {
               {navItems.map((item) => (
                 <a
                   key={item.id}
-                  href={item.id === "home" ? "/" : `/#${item.id}`}
+                  href={`#${item.id}`}
                   className="block text-gray-800 hover:text-primary-cta font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <a href="/menu" className="w-full bg-primary-cta text-white py-2 rounded-lg font-semibold hover:opacity-90 text-center block">
+              <a href="/order-now" className="w-full bg-primary-cta text-white py-2 rounded-lg font-semibold hover:opacity-90 text-center block">
                 Order Now
               </a>
             </div>
@@ -263,7 +236,7 @@ export default function MenuPage() {
             <Phone className="w-6 h-6 text-primary-cta group-hover:scale-110 transition-transform" />
           </a>
           <a
-            href="/menu"
+            href="/order-now"
             className="bg-gradient-to-r from-primary-cta to-accent text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all flex items-center justify-center group font-semibold"
             title="Order Now"
           >
@@ -298,168 +271,67 @@ export default function MenuPage() {
         </div>
       )}
 
-      {/* Menu Header Section */}
-      <div id="menu-header" data-section="menu-header" className="py-12 md:py-20 px-4 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-4xl mx-auto text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">Full Island Menu</h1>
-          <p className="text-lg text-gray-600">Authentic Caribbean dishes crafted fresh daily by our expert grill masters. Every meal is made with love and island passion.</p>
-          <div className="flex flex-wrap justify-center gap-4 mt-6">
-            <a href="tel:2397850423" className="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-primary-cta text-primary-cta rounded-full font-semibold hover:bg-primary-cta hover:text-white transition-all">
-              <Phone className="w-5 h-5" />
-              Call (239) 785-0423
-            </a>
-            <div className="inline-flex items-center gap-2 text-gray-700">
-              <Clock className="w-5 h-5 text-primary-cta" />
-              Open Until 9PM
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Dishes Section */}
-      <div id="mains" data-section="mains">
-        <ProductCardFour
-          title="Main Island Dishes"
-          description="Signature mains grilled to perfection with authentic Caribbean spices and flavors."
-          tag="Must Try"
-          tagIcon={Flame}
+      {/* Hero Section - Menu Header */}
+      <div id="hero" data-section="hero">
+        <HeroSplit
+          title="Complete Menu"
+          description="Explore our complete menu across all 5 pages. Fresh Caribbean flavors, authentic recipes, and island-inspired specialties grilled to perfection."
+          tag="Full Menu"
+          tagIcon={Award}
           tagAnimation="slide-up"
+          background={{ variant: "glowing-orb" }}
           buttons={[
             {
-              text: "Order Online",              href: "#order"
+              text: "Order Now",              href: "/order-now"
             },
           ]}
           buttonAnimation="slide-up"
+          imageSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EMenu Cover%3C/text%3E%3C/svg%3E"
+          imageAlt="Caribbean Flair Complete Menu"
+          mediaAnimation="opacity"
+          imagePosition="right"
+          ariaLabel="Menu page hero section"
+        />
+      </div>
+
+      {/* Full Menu Display - All 5 Pages */}
+      <div id="featured-gallery" data-section="featured-gallery">
+        <BlogCardThree
+          title="All 5 Menu Pages"
+          description="Browse through our complete menu collection featuring all dishes, sides, and beverages."
+          tag="Complete Menu"
+          tagIcon={Camera}
+          tagAnimation="slide-up"
           textboxLayout="default"
-          gridVariant="three-columns-all-equal-width"
           animationType="slide-up"
           useInvertedBackground={false}
-          products={[
+          blogs={[
             {
-              id: "jerk-chicken",              name: "Jerk Chicken Platter",              price: "$15.95",              variant: "Full Rack | Rice & Peas",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773884559172-6jmwoep9.png",              imageAlt: "Jerk chicken grilled on foil with spices"
+              id: "menu-page-1",              category: "Menu Page 1",              title: "Menu Page 1 - Main Dishes",              excerpt: "Our signature main dishes featuring jerk meats, curry specialties, and authentic Caribbean proteins grilled fresh to order.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-094w00ok.jpg",              imageAlt: "Menu Page 1 - Main Dishes",              authorName: "Caribbean Flair",              authorAvatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EMenu%3C/text%3E%3C/svg%3E",              date: "Complete Menu"
             },
             {
-              id: "curry-shrimp",              name: "Curry Shrimp Platter",              price: "$16.95",              variant: "Fresh Daily | Festival Dumplings",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Curry shrimp over rice and peas"
+              id: "menu-page-2",              category: "Menu Page 2",              title: "Menu Page 2 - Seafood & Sides",              excerpt: "Fresh seafood selections including escovitch fish, shrimp dishes, and our famous sides like festival dumplings and tropical slaw.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-8nakpzaa.jpg",              imageAlt: "Menu Page 2 - Seafood & Sides",              authorName: "Caribbean Flair",              authorAvatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EMenu%3C/text%3E%3C/svg%3E",              date: "Complete Menu"
             },
             {
-              id: "conch-fritters",              name: "Conch Fritters Combo",              price: "$12.95",              variant: "6 Pieces | Dipping Sauce",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Golden conch fritters with dipping sauce"
+              id: "menu-page-3",              category: "Menu Page 3",              title: "Menu Page 3 - Platters & Combos",              excerpt: "Our complete platter offerings with combinations of proteins, rice, peas, plantains, and fresh vegetables grilled together.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-i3ll7ifz.jpg",              imageAlt: "Menu Page 3 - Platters & Combos",              authorName: "Caribbean Flair",              authorAvatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EMenu%3C/text%3E%3C/svg%3E",              date: "Complete Menu"
             },
             {
-              id: "curry-goat",              name: "Curry Goat Platter",              price: "$17.95",              variant: "Tender & Aromatic | Bread",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Rich curry goat served over rice and peas"
+              id: "menu-page-4",              category: "Menu Page 4",              title: "Menu Page 4 - Appetizers & Starters",              excerpt: "Delicious appetizers to begin your meal including conch fritters, fried plantains, croquettes, and other island favorites.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-60e6tsue.jpg",              imageAlt: "Menu Page 4 - Appetizers & Starters",              authorName: "Caribbean Flair",              authorAvatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EMenu%3C/text%3E%3C/svg%3E",              date: "Complete Menu"
             },
             {
-              id: "escovitch-fish",              name: "Escovitch Fish",              price: "$16.95",              variant: "Fresh Fish | Pickled Veggies",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Escovitch fish with pickled vegetables and lime"
-            },
-            {
-              id: "jerk-pork",              name: "Jerk Pork Ribs",              price: "$18.95",              variant: "Half Rack | Mac & Cheese",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Perfectly seasoned jerk pork ribs with island spices"
+              id: "menu-page-5",              category: "Menu Page 5",              title: "Menu Page 5 - Beverages & Desserts",              excerpt: "Refresh yourself with authentic Caribbean beverages and indulge in sweet island desserts to complete your meal.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773887611478-gby1l988.jpg",              imageAlt: "Menu Page 5 - Beverages & Desserts",              authorName: "Caribbean Flair",              authorAvatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EMenu%3C/text%3E%3C/svg%3E",              date: "Complete Menu"
             },
           ]}
         />
       </div>
 
-      {/* Sides & Extras Section */}
-      <div id="sides" data-section="sides">
-        <ProductCardFour
-          title="Sides & Extras"
-          description="Perfect complements to your main dish. All made fresh daily with authentic Caribbean flavors."
-          tag="Sides & Accompaniments"
-          tagIcon={Star}
-          tagAnimation="slide-up"
-          buttons={[
-            {
-              text: "Add to Order",              href: "#order"
-            },
-          ]}
-          buttonAnimation="slide-up"
-          textboxLayout="default"
-          gridVariant="three-columns-all-equal-width"
-          animationType="slide-up"
-          useInvertedBackground={true}
-          products={[
-            {
-              id: "rice-peas",              name: "Rice & Peas",              price: "$4.95",              variant: "Island Classic | Per Side",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Fluffy rice and peas side dish"
-            },
-            {
-              id: "mac-cheese",              name: "Creamy Mac & Cheese",              price: "$5.95",              variant: "Soul Food Special | Comfort Classic",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Creamy mac and cheese side dish"
-            },
-            {
-              id: "festival",              name: "Festival Dumplings",              price: "$3.95",              variant: "6 Pieces | Golden & Crispy",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Crispy golden festival dumplings"
-            },
-            {
-              id: "tropical-slaw",              name: "Tropical Slaw",              price: "$4.95",              variant: "Fresh Veggies | Island Dressing",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Fresh tropical slaw with island dressing"
-            },
-            {
-              id: "plantain-chips",              name: "Plantain Chips",              price: "$5.95",              variant: "Crispy & Salted | Caribbean Favorite",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Crispy plantain chips"
-            },
-            {
-              id: "johnny-cakes",              name: "Johnny Cakes",              price: "$4.95",              variant: "4 Pieces | Fresh Baked",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Fresh baked johnny cakes"
-            },
-          ]}
-        />
-      </div>
-
-      {/* Beverages Section */}
-      <div id="beverages" data-section="beverages">
-        <ProductCardFour
-          title="Beverages & Drinks"
-          description="Cool off with our refreshing Caribbean drinks and island favorites."
-          tag="Quench Your Thirst"
-          tagIcon={Zap}
-          tagAnimation="slide-up"
-          buttons={[
-            {
-              text: "Add Drink",              href: "#order"
-            },
-          ]}
-          buttonAnimation="slide-up"
-          textboxLayout="default"
-          gridVariant="three-columns-all-equal-width"
-          animationType="slide-up"
-          useInvertedBackground={false}
-          products={[
-            {
-              id: "ginger-beer",              name: "Ginger Beer",              price: "$3.95",              variant: "Bottle | Refreshing & Spicy",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Cold ginger beer bottle"
-            },
-            {
-              id: "sorrel",              name: "Sorrel Drink",              price: "$4.95",              variant: "Seasonal | Caribbean Favorite",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Traditional sorrel drink"
-            },
-            {
-              id: "mango-juice",              name: "Fresh Mango Juice",              price: "$5.95",              variant: "Fresh Pressed | No Sugar Added",              imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E",              imageAlt: "Fresh mango juice"
-            },
-          ]}
-        />
-      </div>
-
-      {/* Order CTA Section */}
-      <div id="order" data-section="order" className="py-16 md:py-24 px-4 bg-gradient-to-r from-primary-cta to-accent">
-        <div className="max-w-2xl mx-auto text-center space-y-6 text-white">
-          <h2 className="text-3xl md:text-4xl font-bold">Ready to Order?</h2>
-          <p className="text-lg opacity-90">Call us now or visit our location to experience authentic Caribbean island flavors made fresh daily.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <a href="tel:2397850423" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-cta rounded-full font-bold text-lg hover:bg-gray-100 transition-all">
-              <Phone className="w-6 h-6" />
-              Call (239) 785-0423
-            </a>
-            <a href="https://www.google.com/maps/search/caribbean+flair+island+jerk+grill+lehigh+acres" target="_blank" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white/30 transition-all">
-              <MapPin className="w-6 h-6" />
-              Visit Us
-            </a>
-          </div>
-          <div className="pt-6 border-t border-white/30 space-y-2 text-sm">
-            <p>📍 801 Leeland Heights Blvd W, Lehigh Acres, FL 33936</p>
-            <p>🕐 Open Until 9PM Daily</p>
-            <p>🚚 Delivery Available</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
+      {/* Footer with Local Map Info and Social Links */}
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773884559172-6jmwoep9.png"
+          imageSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EFooter Image%3C/text%3E%3C/svg%3E"
           imageAlt="Caribbean Flair Island Jerk Grill Trailer"
           logoText="Caribbean Flair"
-          copyrightText="© 2025 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
+          copyrightText="© 2026 Caribbean Flair Island Jerk Grill | Black & Women-Owned | Lehigh Acres, FL"
           columns={footerColumns}
         />
       </div>
