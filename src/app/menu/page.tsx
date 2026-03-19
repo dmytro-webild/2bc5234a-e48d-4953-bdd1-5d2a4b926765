@@ -4,9 +4,9 @@ import Link from "next/link";
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleCentered from "@/components/navbar/NavbarStyleCentered/NavbarStyleCentered";
 import HeroSplit from "@/components/sections/hero/HeroSplit";
-import BlogCardThree from "@/components/sections/blog/BlogCardThree";
+import ProductCardFour from "@/components/sections/product/ProductCardFour";
 import FooterMedia from "@/components/sections/footer/FooterMedia";
-import { Award, Camera, Phone, ShoppingCart } from "lucide-react";
+import { Award, Flame, Phone, ShoppingCart } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function MenuPage() {
@@ -44,16 +44,16 @@ export default function MenuPage() {
       title: "Quick Links",      items: [
         { label: "Home", href: "/" },
         { label: "Menu", href: "/menu" },
-        { label: "Gallery", href: "#featured-gallery" },
-        { label: "Reviews", href: "#testimonials" },
+        { label: "Gallery", href: "/gallery" },
+        { label: "Reviews", href: "/reviews" },
       ],
     },
     {
       title: "Order & Contact",      items: [
         { label: "Order Online", href: "/order-now" },
         { label: "Call Us", href: "tel:2397850423" },
-        { label: "Locations & Hours", href: "#footer" },
-        { label: "Contact", href: "#footer" },
+        { label: "Locations & Hours", href: "/locations" },
+        { label: "Contact", href: "/contact" },
       ],
     },
     {
@@ -70,6 +70,45 @@ export default function MenuPage() {
         { label: "Open Until 9PM", href: "#" },
         { label: "Delivery Available", href: "#" },
       ],
+    },
+  ];
+
+  // All 5 menu pages with their images
+  const menuPages = [
+    {
+      id: "menu-page-1",      name: "Menu Page 1",      title: "Main Dishes",      description: "Signature jerk meats, curry specialties, and authentic Caribbean proteins grilled fresh to order.",      imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773931203656-6q5n09tb.jpg",      imageAlt: "Menu Page 1 - Main Dishes",      items: [
+        { name: "Jerk Chicken Platter", price: "$15.95", variant: "Full Rack" },
+        { name: "Curry Goat Platter", price: "$17.95", variant: "Tender & Aromatic" },
+        { name: "Jerk Pork Platter", price: "$16.95", variant: "Juicy & Spiced" },
+      ]
+    },
+    {
+      id: "menu-page-2",      name: "Menu Page 2",      title: "Seafood & Appetizers",      description: "Fresh seafood selections and delicious appetizers to start your island feast.",      imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773931203656-k0zmv702.jpg",      imageAlt: "Menu Page 2 - Seafood & Appetizers",      items: [
+        { name: "Escovitch Fish", price: "$18.95", variant: "Island Tradition" },
+        { name: "Curry Shrimp Platter", price: "$16.95", variant: "Fresh Daily" },
+        { name: "Conch Fritters Combo", price: "$12.95", variant: "6 Pieces" },
+      ]
+    },
+    {
+      id: "menu-page-3",      name: "Menu Page 3",      title: "Sandwiches & Wraps",      description: "Fresh-grilled sandwiches and wraps packed with authentic Caribbean flavors.",      imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773931203656-uswy1139.jpg",      imageAlt: "Menu Page 3 - Sandwiches & Wraps",      items: [
+        { name: "Jerk Chicken Sandwich", price: "$11.95", variant: "Fresh Bread" },
+        { name: "Curry Goat Sandwich", price: "$12.95", variant: "Hearty & Flavorful" },
+        { name: "Pulled Pork Sandwich", price: "$11.95", variant: "Smoky & Tender" },
+      ]
+    },
+    {
+      id: "menu-page-4",      name: "Menu Page 4",      title: "Sides & Platters",      description: "Classic Caribbean sides and complete platter combinations.",      imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773931203657-pi7z5ykc.jpg",      imageAlt: "Menu Page 4 - Sides & Platters",      items: [
+        { name: "Rice & Peas", price: "$4.95", variant: "Classic Caribbean" },
+        { name: "Creamy Mac & Cheese", price: "$5.95", variant: "Comfort Classic" },
+        { name: "Festival Dumplings", price: "$4.95", variant: "Golden & Crispy" },
+      ]
+    },
+    {
+      id: "menu-page-5",      name: "Menu Page 5",      title: "Beverages & Specials",      description: "Refreshing tropical beverages and special combo selections.",      imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773931203657-qyiakzyt.jpg",      imageAlt: "Menu Page 5 - Beverages & Specials",      items: [
+        { name: "Sorrel Punch", price: "$3.95", variant: "16 oz" },
+        { name: "Island Ginger Beer", price: "$3.95", variant: "Refreshing" },
+        { name: "Island Feast Combo", price: "$22.95", variant: "Jerk Chicken + Sides" },
+      ]
     },
   ];
 
@@ -274,15 +313,15 @@ export default function MenuPage() {
       {/* Hero Section - Menu Header */}
       <div id="hero" data-section="hero">
         <HeroSplit
-          title="Complete Menu"
-          description="Explore our complete menu across all 5 pages. Fresh Caribbean flavors, authentic recipes, and island-inspired specialties grilled to perfection."
+          title="Complete Menu - All 5 Pages"
+          description="Explore our full authentic Caribbean menu across all categories. Fresh island flavors, grilled to perfection. Click each menu page to see detailed items and pricing."
           tag="Full Menu"
           tagIcon={Award}
           tagAnimation="slide-up"
           background={{ variant: "glowing-orb" }}
           buttons={[
             {
-              text: "Order Now",              href: "/order-now"
+              text: "Order Online Now",              href: "/order-now"
             },
           ]}
           buttonAnimation="slide-up"
@@ -294,35 +333,123 @@ export default function MenuPage() {
         />
       </div>
 
-      {/* Full Menu Display - All 5 Pages */}
+      {/* All 5 Menu Pages with Interactive Display */}
       <div id="featured-gallery" data-section="featured-gallery">
-        <BlogCardThree
-          title="All 5 Menu Pages"
-          description="Browse through our complete menu collection featuring all dishes, sides, and beverages."
-          tag="Complete Menu"
-          tagIcon={Camera}
-          tagAnimation="slide-up"
-          textboxLayout="default"
-          animationType="slide-up"
-          useInvertedBackground={false}
-          blogs={[
-            {
-              id: "menu-page-1",              category: "Menu Page 1",              title: "Menu Page 1 - Main Dishes",              excerpt: "Our signature main dishes featuring jerk meats, curry specialties, and authentic Caribbean proteins grilled fresh to order.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773930101919-jnf5am09.png?_wi=2",              imageAlt: "Menu Page 1 - Main Dishes",              authorName: "Caribbean Flair",              authorAvatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EMenu%3C/text%3E%3C/svg%3E",              date: "Complete Menu"
-            },
-            {
-              id: "menu-page-2",              category: "Menu Page 2",              title: "Menu Page 2 - Seafood & Sides",              excerpt: "Fresh seafood selections including escovitch fish, shrimp dishes, and our famous sides like festival dumplings and tropical slaw.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773930101919-ghty3a8u.png?_wi=2",              imageAlt: "Menu Page 2 - Seafood & Sides",              authorName: "Caribbean Flair",              authorAvatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EMenu%3C/text%3E%3C/svg%3E",              date: "Complete Menu"
-            },
-            {
-              id: "menu-page-3",              category: "Menu Page 3",              title: "Menu Page 3 - Platters & Combos",              excerpt: "Our complete platter offerings with combinations of proteins, rice, peas, plantains, and fresh vegetables grilled together.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773930101919-6bwyikyz.png",              imageAlt: "Menu Page 3 - Platters & Combos",              authorName: "Caribbean Flair",              authorAvatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EMenu%3C/text%3E%3C/svg%3E",              date: "Complete Menu"
-            },
-            {
-              id: "menu-page-4",              category: "Menu Page 4",              title: "Menu Page 4 - Appetizers & Starters",              excerpt: "Delicious appetizers to begin your meal including conch fritters, fried plantains, croquettes, and other island favorites.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773930101919-gu4nmtl3.png",              imageAlt: "Menu Page 4 - Appetizers & Starters",              authorName: "Caribbean Flair",              authorAvatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EMenu%3C/text%3E%3C/svg%3E",              date: "Complete Menu"
-            },
-            {
-              id: "menu-page-5",              category: "Menu Page 5",              title: "Menu Page 5 - Beverages & Desserts",              excerpt: "Refresh yourself with authentic Caribbean beverages and indulge in sweet island desserts to complete your meal.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773930101920-zrd23q6i.jpg?_wi=2",              imageAlt: "Menu Page 5 - Beverages & Desserts",              authorName: "Caribbean Flair",              authorAvatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23e8e8e8'/%3E%3Ctext x='50%' y='50%' font-size='12' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EMenu%3C/text%3E%3C/svg%3E",              date: "Complete Menu"
-            },
-          ]}
-        />
+        <div className="px-4 py-16 md:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">All 5 Menu Pages</h2>
+              <p className="text-lg text-gray-600">Browse through our complete menu collection featuring all dishes, sides, and beverages. Click on each page to explore items and pricing.</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {menuPages.map((page) => (
+                <div
+                  key={page.id}
+                  className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer bg-white border border-gray-200 hover:border-orange-500"
+                  onClick={() => {
+                    // Open menu page in new context or scroll to details
+                    const details = document.getElementById(`details-${page.id}`);
+                    if (details) {
+                      details.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  {/* Menu Page Image */}
+                  <div className="relative overflow-hidden h-64 bg-gray-100">
+                    <img
+                      src={page.imageSrc}
+                      alt={page.imageAlt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                      <div>
+                        <p className="text-orange-400 text-sm font-semibold mb-1">{page.name}</p>
+                        <h3 className="text-white text-xl font-bold">{page.title}</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Menu Page Details */}
+                  <div className="p-4">
+                    <p className="text-gray-600 text-sm mb-4">{page.description}</p>
+
+                    {/* Items Preview */}
+                    <div className="space-y-2 mb-4">
+                      {page.items.map((item, idx) => (
+                        <div key={idx} className="text-sm border-t pt-2">
+                          <div className="flex justify-between items-start">
+                            <div>
+                              <p className="font-semibold text-gray-800">{item.name}</p>
+                              <p className="text-gray-500 text-xs">{item.variant}</p>
+                            </div>
+                            <p className="font-bold text-orange-600">{item.price}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* View More Button */}
+                    <a
+                      href="/order-now"
+                      className="block w-full text-center bg-gradient-to-r from-orange-500 to-orange-600 text-white py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                    >
+                      Order from {page.name}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Menu Details Section */}
+      <div className="px-4 py-16 md:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-12 text-center">Menu Categories Overview</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {menuPages.map((page) => (
+              <div
+                key={`details-${page.id}`}
+                id={`details-${page.id}`}
+                className="bg-white rounded-lg p-6 shadow-md border-l-4 border-orange-500"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <img
+                    src={page.imageSrc}
+                    alt={page.imageAlt}
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">{page.name}: {page.title}</h3>
+                    <p className="text-gray-600 text-sm mt-1">{page.description}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-3 mt-4">
+                  {page.items.map((item, idx) => (
+                    <div key={idx} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
+                      <div>
+                        <p className="font-semibold text-gray-800">{item.name}</p>
+                        <p className="text-gray-500 text-xs">{item.variant}</p>
+                      </div>
+                      <p className="font-bold text-orange-600 text-lg">{item.price}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <a
+                  href="/order-now"
+                  className="mt-6 block w-full text-center bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-lg font-semibold transition-colors"
+                >
+                  Order Now
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Footer with Local Map Info and Social Links */}
