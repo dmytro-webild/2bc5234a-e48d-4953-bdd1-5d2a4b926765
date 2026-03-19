@@ -65,10 +65,10 @@ export default function OrderNowPage() {
   ];
 
   const deliveryServices = [
-    { name: "Uber Eats", href: "https://www.ubereats.com" },
-    { name: "DoorDash", href: "https://www.doordash.com" },
-    { name: "Grubhub", href: "https://www.grubhub.com" },
-    { name: "Seamless", href: "https://www.seamless.com" },
+    { name: "Uber Eats", href: "https://www.ubereats.com", logo: "🍔" },
+    { name: "DoorDash", href: "https://www.doordash.com", logo: "🚗" },
+    { name: "Grubhub", href: "https://www.grubhub.com", logo: "📱" },
+    { name: "Seamless", href: "https://www.seamless.com", logo: "🛵" },
   ];
 
   return (
@@ -194,10 +194,11 @@ export default function OrderNowPage() {
                   href={service.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative overflow-hidden rounded-lg p-6 bg-white border-2 border-gray-200 hover:border-orange-500 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-h-32 text-center"
+                  className="group relative overflow-hidden rounded-lg p-6 bg-white border-2 border-gray-200 hover:border-orange-500 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center min-h-40 text-center"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/5 group-hover:to-orange-500/10 transition-all duration-300" />
                   <div className="relative z-10">
+                    <div className="text-4xl mb-3">{service.logo}</div>
                     <p className="font-bold text-lg mb-1 group-hover:text-orange-600 transition-colors">{service.name}</p>
                     <p className="text-sm text-gray-500 group-hover:text-gray-700">Order online →</p>
                   </div>
