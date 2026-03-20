@@ -54,7 +54,7 @@ export default function HomePage() {
     { name: "About Us", id: "owners-spotlight" },
     { name: "Gallery", id: "featured-gallery" },
     { name: "Reviews", id: "testimonials" },
-    { name: "Locations", id: "footer" },
+    { name: "Full Menu", id: "full-menu" },
   ];
 
   const footerColumns = [
@@ -323,7 +323,7 @@ export default function HomePage() {
               text: "Order Online Now",              href: "/order-now"
             },
             {
-              text: "View Full Menu",              href: "/menu"
+              text: "View Full Menu",              href: "/full-menu"
             },
           ]}
           buttonAnimation="slide-up"

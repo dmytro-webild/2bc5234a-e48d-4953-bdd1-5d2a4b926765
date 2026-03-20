@@ -26,7 +26,7 @@ export default function AboutPage() {
     { name: "About Us", id: "about" },
     { name: "Gallery", id: "gallery" },
     { name: "Reviews", id: "reviews" },
-    { name: "Locations", id: "locations" },
+    { name: "Full Menu", id: "full-menu" },
   ];
 
   const footerColumns = [
