@@ -47,7 +47,7 @@ export default function GalleryPage() {
     {
       title: "Connect With Us",      items: [
         { label: "Facebook", href: "https://facebook.com/caribbeanflair" },
-        { label: "About Us", href: "/about" },
+        { label: "About Us", href: "/" },
         { label: "Privacy Policy", href: "/" },
         { label: "Terms of Service", href: "/" },
       ],
@@ -66,7 +66,7 @@ export default function GalleryPage() {
     {
       id: "user-upload-1",      category: "Dishes",      title: "Caribbean Delight",      excerpt:
         "Stunning presentation of our signature Caribbean feast with vibrant colors and authentic flavors.",      imageSrc:
-        "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1773849790665-2gw0wih3.jpg?_wi=1",      imageAlt: "User uploaded Caribbean dish",      authorName: "Caribbean Flair Community",      authorAvatar:
+        "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1774024782095-k6jjvf7t.jpg",      imageAlt: "User uploaded Caribbean dish",      authorName: "Caribbean Flair Community",      authorAvatar:
         "http://img.b2bpic.net/free-photo/handsome-business-man-wearing-suit-looking-camera-smiling-broadly-with-happy-face-standing-white-background_141793-54115.jpg",      date: "Community Upload"},
     {
       id: "user-upload-2",      category: "Dishes",      title: "Island Feast Experience",      excerpt:
