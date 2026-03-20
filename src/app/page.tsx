@@ -327,7 +327,7 @@ export default function HomePage() {
             },
           ]}
           buttonAnimation="slide-up"
-          imageSrc="data:image/svg+xml,%3Csvg xmlns=?_wi=3'http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='16' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3ETemplate Image%3C/text%3E%3C/svg%3E"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1774037074715-sefatm1w.png"
           imageAlt="Red Caribbean Flair Island Jerk Grill Trailer"
           mediaAnimation="opacity"
           imagePosition="right"
