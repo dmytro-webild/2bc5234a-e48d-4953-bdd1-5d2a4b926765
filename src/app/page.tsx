@@ -356,15 +356,15 @@ export default function HomePage() {
           products={[
             {
               id: "jerk-chicken",              name: "Jerk Chicken Platter",              price: "$15.95",              variant: "Full Rack",              imageSrc:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Jerk_chicken.jpg/1024px-Jerk_chicken.jpg",              imageAlt: "Jerk chicken grilled on foil with spices"
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1774032291765-7gv1fwjr.jpg",              imageAlt: "Jerk chicken grilled on foil with spices"
             },
             {
               id: "curry-shrimp",              name: "Curry Shrimp Platter",              price: "$16.95",              variant: "Fresh Daily",              imageSrc:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Curry_shrimp.jpg/1024px-Curry_shrimp.jpg",              imageAlt: "Curry shrimp over rice and peas"
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1774032307530-eoalvxyb.jpg",              imageAlt: "Curry shrimp over rice and peas"
             },
             {
-              id: "conch-fritters",              name: "Conch Fritters Combo",              price: "$12.95",              variant: "6 Pieces",              imageSrc:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Conch_fritters.jpg/1024px-Conch_fritters.jpg",              imageAlt: "Golden conch fritters with dipping sauce"
+              id: "conch-fritters",              name: "Jerk Pork Dinner",              price: "$15.95",              variant: "Over Grill ",              imageSrc:
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1774032264249-39yd1uqq.jpg",              imageAlt: "Golden conch fritters with dipping sauce"
             },
           ]}
         />
