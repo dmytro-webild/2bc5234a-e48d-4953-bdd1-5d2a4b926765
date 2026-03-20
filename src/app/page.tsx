@@ -363,8 +363,8 @@ export default function HomePage() {
                 "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1774032307530-eoalvxyb.jpg",              imageAlt: "Curry shrimp over rice and peas"
             },
             {
-              id: "conch-fritters",              name: "Jerk Pork Dinner",              price: "$15.95",              variant: "Over Grill ",              imageSrc:
-                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1774032264249-39yd1uqq.jpg",              imageAlt: "Golden conch fritters with dipping sauce"
+              id: "jerk-pork",              name: "Jerk Pork Dinner",              price: "$15.95",              variant: "Over Grill",              imageSrc:
+                "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1774037337497-f5ulijog.jpg",              imageAlt: "Jerk pork platter grilled to perfection"
             },
           ]}
         />
