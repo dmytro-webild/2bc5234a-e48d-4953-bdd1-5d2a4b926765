@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: 'CaribbeanFlair1',
     description: 'Caribbean vibes wrapped in a truck',
-    images: ["https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1774030817217-k2yjqe0c.png"],
+    images: ["https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Afn0reuidgadYlHif4J2xHlmq8/uploaded-1774035733410-heoi30la.png"],
   },
   robots: {
     index: true,
